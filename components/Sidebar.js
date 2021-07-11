@@ -2,6 +2,8 @@ import React from 'react'
 import { Heading, Avatar, Text, Link } from '@chakra-ui/react'
 import styles from '../styles/components/Sidebar.module.css'
 
+const assetPrefix = (process.env.assetPrefix === '') ? '/' : process.env.assetPrefix
+
 const Sidebar = ({ }) => {
     return (
         <>
@@ -14,7 +16,7 @@ const Sidebar = ({ }) => {
                         <Heading as="h3" size="lg">Alex Cantón</Heading>
                     </header>
                     <section className={styles.avatarContent}>
-                        <Avatar size="2xl" name="Alex Cantón" src="/avatar/alex.jpg" />
+                        <Avatar size="2xl" name="Alex Cantón" src={`${assetPrefix}avatar/alex.jpg`} />
                     </section>
                     <section className={styles.socialContent}>
                         <Text as="p">Sígueme en</Text>
