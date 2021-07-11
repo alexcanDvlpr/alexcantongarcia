@@ -1,0 +1,18 @@
+.homeSectionContent {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeTitleContent {
+    width: 50%;
+    height: auto;
+}
+
+.homeText {
+    width: 75%;
+}

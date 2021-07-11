@@ -1,5 +1,6 @@
 import React from 'react'
 import Sidebar from '../components/Sidebar'
+import HomeSection from '../components/sections/HomeSection'
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
           <Sidebar />
         </div>
         <div>
-          <p>Lorem</p>
+          <HomeSection />
         </div>
       </div>
     </div>
