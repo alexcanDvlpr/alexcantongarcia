@@ -2,6 +2,6 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   basePath: '',
-  assetPrefix: isProd ? '/deploy-next-js/' : '',
+  assetPrefix: isProd ? '/alexcantongarcia/' : '',
   reactStrictMode: true,
 }
