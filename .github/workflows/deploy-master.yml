@@ -32,7 +32,7 @@ jobs:
       
       
     - name: Exportar el Artefacto 📦
-    - run: npm run export
+      run: npm run export
 
     - name: Recursos Estaticos 📰
       run: touch ./out/.nojekyll
