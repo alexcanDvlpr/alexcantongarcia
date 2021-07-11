@@ -9,7 +9,7 @@ export default function Home() {
         <div className="sidebar-content">
           <Sidebar />
         </div>
-        <div>
+        <div className="content-wrapper">
           <HomeSection />
         </div>
       </div>

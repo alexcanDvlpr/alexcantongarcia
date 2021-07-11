@@ -16,3 +16,24 @@
 .homeText {
     width: 75%;
 }
+
+@media only screen and (max-width: 600px) {
+    .homeTitleContent {
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .homeTitle {
+        font-size: 34px !important;
+        text-align: center;
+    }
+
+    .lastHomeTitle {
+        margin-bottom: 24px;
+    }
+}
