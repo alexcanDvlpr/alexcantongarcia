@@ -1,0 +1,45 @@
+name: Deploy Master Branch to Github Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        
+        
+    - name: Install Project Packages 💿
+      run: npm ci
+      
+      
+    - name: Build Portfolio Web ⛏️
+      run: npm run build
+      
+      
+    - name: Exportar el Artefacto 📦
+    - run: npm run export
+
+    - name: Recursos Estaticos 📰
+      run: touch ./out/.nojekyll
+      
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        folder: out
