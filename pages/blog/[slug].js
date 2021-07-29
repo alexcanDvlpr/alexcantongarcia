@@ -1,7 +1,7 @@
-import { getFileBySlug, getFiles } from "../../lib/mdx"
 import MDXComponents from '../../components/MDXComponents'
+import { getFileBySlug, getFiles } from '../../lib/mdx'
+import { Container } from '@chakra-ui/react'
 import { MDXRemote } from 'next-mdx-remote'
-import { Container } from "@chakra-ui/react"
 
 const Post = ({ source, frontmatter }) => {
 

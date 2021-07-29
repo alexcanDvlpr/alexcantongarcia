@@ -1,7 +1,7 @@
-import '../styles/globals.css'
-import theme from '../styles/theme'
-import Head from 'next/head'
 import { ChakraProvider } from '@chakra-ui/react'
+import theme from '../styles/theme'
+import '../styles/globals.css'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
   return (

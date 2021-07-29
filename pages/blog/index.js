@@ -1,7 +1,7 @@
 import { Avatar, Container, Heading, Text, Wrap } from "@chakra-ui/react";
-import Link from 'next/link'
-import { orderByDates } from "../../lib/date";
 import { getAllFilesMetadata } from "../../lib/mdx";
+import { orderByDates } from "../../lib/date";
+import Link from 'next/link'
 
 const isProd = process.env.NODE_ENV === 'production'
 

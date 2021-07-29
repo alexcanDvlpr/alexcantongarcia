@@ -1,6 +1,6 @@
-import React from 'react'
-import Sidebar from '../components/Sidebar'
 import HomeSection from '../components/sections/HomeSection'
+import Sidebar from '../components/Sidebar'
+import React from 'react'
 
 export default function Home() {
   return (
