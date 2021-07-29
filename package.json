@@ -10,15 +10,24 @@
     "export": "next export"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.6.5",
-    "@emotion/react": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
-    "framer-motion": "^4.1.17",
-    "install": "^0.13.0",
+    "@chakra-ui/react": "1.6.5",
+    "@emotion/react": "11.4.0",
+    "@emotion/styled": "11.3.0",
+    "date-fns": "^2.23.0",
+    "framer-motion": "4.1.17",
+    "gray-matter": "4.0.3",
+    "install": "0.13.0",
+    "mdx-prism": "0.3.4",
     "next": "11.0.1",
-    "npm": "^7.19.1",
+    "next-mdx-remote": "3.0.4",
+    "npm": "7.19.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "rehype": "11.0.0",
+    "remark-autolink-headings": "6.0.1",
+    "remark-capitalize": "1.1.0",
+    "remark-code-titles": "0.1.2",
+    "remark-slug": "6.1.0"
   },
   "devDependencies": {
     "eslint": "7.30.0",

@@ -32,12 +32,12 @@ const Sidebar = ({ }) => {
                             </Link>
                         </div>
                     </section>
-                    { /* <section className={ styles.blogContent }>
+                    <section className={ styles.blogContent }>
                         <Text>Tambien puedes seguirme en</Text>
-                        <Link>
+                        <Link href="/blog">
                             <Text>Mi Blog</Text>
                         </Link>
-                    </section> */ }
+                    </section>
                 </div>
             </aside>
         </>
