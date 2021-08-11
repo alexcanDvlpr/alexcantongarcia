@@ -5,6 +5,11 @@ import { MDXRemote } from 'next-mdx-remote'
 
 const Post = ({ source, frontmatter }) => {
 
+    console.log(frontmatter)
+    let timeToRead = Math.round(frontmatter.readingTime.minutes)
+    timeToRead = (timeToRead === 0) ? 1 : timeToRead
+    console.log(timeToRead)
+
     return (
         <Container maxW="container.lg">
             <MDXRemote {...source} components={MDXComponents} />
