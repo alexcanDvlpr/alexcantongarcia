@@ -2,6 +2,7 @@ import { Avatar, Container, Heading, Text, Wrap, Box } from "@chakra-ui/react";
 import { getAllFilesMetadata } from "../../lib/mdx";
 import { orderByDates } from "../../lib/date";
 import Link from 'next/link'
+import Header from "../../components/Header";
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -10,6 +11,8 @@ const Blog = ({ posts }) => {
     const assetsPrefix = (isProd) ? '/alexcantongarcia/' : '/'
 
     return (
+    <>
+        <Header />
         <Container maxW="container.lg">
             <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas ipsum quis metus consequat, a cursus elit consequat. Phasellus sed orci et quam tempor feugiat a ut turpis. Sed eget condimentum neque. Nulla vehicula tellus non ipsum fringilla, vitae finibus magna faucibus. Nunc at nunc quis metus tempor accu</Text>
             {
@@ -29,6 +32,7 @@ const Blog = ({ posts }) => {
                 ))
             }
         </Container>
+    </>
     )
 }
 
