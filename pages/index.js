@@ -3,6 +3,7 @@ import HomeSection from '../components/sections/HomeSection'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import React from 'react'
+import AboutSection from '../components/sections/AboutSection'
 
 export default function Home() {
   return (
@@ -12,14 +13,7 @@ export default function Home() {
         <div className="content-wrapper">
           <HomeSection />
           <CompanySection />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          <AboutSection />
           <Footer />
         </div>
       </div>
