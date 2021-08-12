@@ -3,18 +3,38 @@
     height: auto;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.homeTitleContent {
+.homeImageContent {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 10px 25px 10px 15px;
+}
+
+.homeImageContent img {
     width: 50%;
+    height: auto;
+    border-radius: 100%;
+    object-position: right;
+}
+
+.homeTitleContent {
+    width: 60%;
     height: auto;
 }
 
 .homeText {
     width: 75%;
+}
+
+.lastHomeTitle {
+    margin-bottom: 22px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -25,7 +45,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: justify;
     }
 
     .homeTitle {
@@ -35,5 +54,13 @@
 
     .lastHomeTitle {
         margin-bottom: 24px;
+    }
+
+    .homeTitleContent {
+        width: 100%;
+    }
+
+    .homeImageContent {
+        display: none;
     }
 }
