@@ -22,3 +22,24 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+@media only screen and (max-width: 600px) {
+    .sliderCompanies {
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+        display: flex;
+        overflow-x: scroll;
+        scroll-padding: 0 50%;
+        scroll-snap-type: x mandatory;
+    }
+
+    .sliderCompanies img {
+        flex: 0 0 100%;
+        width: initial;
+        height: inherit;
+        object-fit: initial;
+        scroll-snap-align: center;
+        margin-left: 20px;
+    }
+}

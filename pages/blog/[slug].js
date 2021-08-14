@@ -1,5 +1,6 @@
 import MDXComponents from '../../components/MDXComponents'
 import { getFileBySlug, getFiles } from '../../lib/mdx'
+import Header from '../../components/Header'
 import { Container } from '@chakra-ui/react'
 import { MDXRemote } from 'next-mdx-remote'
 
@@ -11,9 +12,12 @@ const Post = ({ source, frontmatter }) => {
     console.log(timeToRead)
 
     return (
-        <Container maxW="container.lg">
-            <MDXRemote {...source} components={MDXComponents} />
-        </Container>
+        <div className="main">
+            <Header showTitle={true} />
+            <Container maxW="container.lg" style={{ marginTop: '78px' }}>
+                <MDXRemote {...source} components={MDXComponents} />
+            </Container>
+        </div >
     )
 }
 

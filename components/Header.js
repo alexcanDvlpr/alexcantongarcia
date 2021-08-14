@@ -1,6 +1,8 @@
-const { Link } = require("@chakra-ui/react")
+import ToggleThemeColorButton from "./ToggleThemeColorButton"
 
-const Header = () => {
+const { Link, Heading } = require("@chakra-ui/react")
+
+const Header = ({ showTitle = false }) => {
 
     const navbarRoutes = [
         { href: '/', name: 'Inicio' },
@@ -10,16 +12,26 @@ const Header = () => {
     return (
         <header>
             <nav>
+                <span className="headerName">
+                    {
+                        showTitle ?
+                            <Heading as="h1" size="lg">Alex Cantón</Heading> :
+                            ''
+                    }
+                </span>
                 <ul className="nav-wrapper">
-                    <li>
                         {
                             navbarRoutes.map(link => (
-                                <Link key={link.name} href={link.href}>
-                                    <span className="nav-item-link">{link.name}</span>
-                                </Link>
+                                <li key={link.name} className="nav-item-link">
+                                    <Link href={link.href}>
+                                        {link.name}
+                                    </Link>
+                                </li>
                             ))
                         }
-                    </li>
+                        <li className="nav-item-link">
+                            <ToggleThemeColorButton />
+                        </li>
                 </ul>
             </nav>
             <style jsx>{`
@@ -35,15 +47,19 @@ const Header = () => {
                     left: 0;
                 }
                 nav {
-                    width: 25%;
+                    width: 100%;
                     height: 100%;
                     display: flex;
                     flex-direction: row;
-                    justify-content: flex-end;
+                    justify-content: space-around;
                     padding: 0px 30px;
                 }
+                .headerName {
+                    width: 25%;
+                    height: 100%;
+                }
                 .nav-wrapper {
-                    width: 100%;
+                    width: 75%;
                     height: 100%;
                     display: flex;
                     flex-direction: row;
@@ -52,9 +68,30 @@ const Header = () => {
                     list-style: none;
                 }
                 .nav-item-link {
-                    padding-left: 45px;
+                    margin-left: 45px;
                     font-size: 1.5rem;
                     font-weight: 500;
+                }
+                @media only screen and (max-width: 600px) { 
+                    nav {
+                        flex-direction: column;
+                        padding: 0px 10px;
+                        justify-content: space-around;
+                    }
+                    .headerName {
+                        margin-top: 20px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                    }
+                    .nav-wrapper {
+                        width: 100%;
+                        flex-wrap: no-wrap;
+                        padding: 0;
+                        margin: 0;
+                    }
                 }
             `}</style>
         </header>
