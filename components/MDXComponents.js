@@ -1,9 +1,9 @@
 /* eslint-disable react/display-name */
-import { Heading, Text } from "@chakra-ui/react";
-import YoutubeVideo from './YoutubeVideo'
+import { Heading, Text } from "@chakra-ui/react"
+import YoutubeVideo from './YouTubeVideo'
 import Separator from './Separator'
-import CustomImage from "./CustomImage";
-import Blockquote from "./Blockquote";
+import CustomImage from "./CustomImage"
+import Blockquote from "./Blockquote"
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
