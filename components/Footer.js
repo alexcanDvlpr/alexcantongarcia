@@ -3,7 +3,7 @@ import { Link } from "@chakra-ui/react"
 const Footer = () => {
 
     const rss = [
-        { link: 'https://twitter.com/ACanton97', name: 'Twitter' },
+        { link: 'https://twitter.com/AlexcanDvlpr', name: 'Twitter' },
         { link: 'https://www.linkedin.com/in/alejandro-cant%C3%B3n-garc%C3%ADa-2a5b7311a/', name: 'Linkedin' },
         { link: 'https://github.com/alexcanDvlpr', name: 'Github' },
     ]
