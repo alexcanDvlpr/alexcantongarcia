@@ -4,9 +4,9 @@ function NightIcon() {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="512"
-            height="512"
+            enableBackground="new 0 0 512 512"
             viewBox="0 0 512 512"
+            xmlSpace="preserve"
         >
             <path
                 fill="#ffe07d"

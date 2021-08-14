@@ -2,6 +2,7 @@
 import React from 'react'
 import { Heading, Text } from '@chakra-ui/react'
 import styles from '../../styles/components/sections/HomeSection.module.css'
+import ScrollingIcon from '../icons/ScrollingIcon'
 
 const HomeSection = ({ }) => {
     return (
@@ -15,6 +16,11 @@ const HomeSection = ({ }) => {
                 <Text className={styles.homeText} mt={2} fontSize="2xl">Desarrollador web en Madrid, España. Tengo experiencia aplicando soluciones tanto en Backend como en Frontend.</Text>
                 <Text className={styles.homeText} fontSize="2xl" mt={2}>Durante este tiempo he trabajado con Spring Boot, JavaScript, TypeScript y Node.js,
                     y con distintas tecnologías como Docker y Docker Compose, AWS, CI/CD etc.</Text>
+            </div>
+            <div className="scrolling-icon">
+                <div className="icon">
+                    <ScrollingIcon fillColor="#00c896" />
+                </div>
             </div>
         </section>
     )

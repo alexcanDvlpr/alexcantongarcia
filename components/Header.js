@@ -45,6 +45,7 @@ const Header = ({ showTitle = false }) => {
                     position: absolute;
                     top: 0;
                     left: 0;
+                    z-index: 1;
                 }
                 nav {
                     width: 100%;
@@ -72,7 +73,7 @@ const Header = ({ showTitle = false }) => {
                     font-size: 1.5rem;
                     font-weight: 500;
                 }
-                @media only screen and (max-width: 600px) { 
+                @media only screen and (max-width: 600px) {
                     nav {
                         flex-direction: column;
                         padding: 0px 10px;

@@ -4,8 +4,8 @@ function SunIcon() {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            enableBackground="new 0 0 1024 1024"
-            viewBox="0 0 1024 1024"
+            enableBackground="new 0 0 512 512"
+            viewBox="0 0 512 512"
             xmlSpace="preserve"
         >
             <g fill="#FFD347">

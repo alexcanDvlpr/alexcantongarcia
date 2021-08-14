@@ -7,7 +7,7 @@ const ToggleThemeColorButton = () => {
 
     return (
 
-            <Button onClick={toggleColorMode}>
+            <Button variant="link" onClick={toggleColorMode}>
                 {colorMode === "light" ? <NightIcon /> : <SunIcon />}
             </Button>
     )
