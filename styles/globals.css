@@ -1,5 +1,11 @@
 @import url('./prism.css');
 
+/* COMPONENTS */
+
+@import url('../components/Footer/footer.css');
+@import url('../components/sections/HomeSection/home.css');
+
+/* GLOBAL STYLES */
 *,
 html,
 body {

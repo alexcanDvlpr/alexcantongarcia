@@ -1,4 +1,4 @@
-import ToggleThemeColorButton from "./ToggleThemeColorButton"
+import ToggleThemeColorButton from "../ToggleTheme/ToggleThemeColorButton"
 
 const { Link, Heading } = require("@chakra-ui/react")
 

@@ -1,5 +1,5 @@
 import { Heading, Image } from '@chakra-ui/react'
-import styles from '../../styles/components/sections/CompanySection.module.css'
+import styles from '../../../styles/components/sections/CompanySection.module.css'
 
 const CompanySection = () => {
 
