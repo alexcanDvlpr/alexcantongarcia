@@ -2,7 +2,7 @@ import { Avatar, Container, Heading, Text, Wrap, Box } from "@chakra-ui/react";
 import { getAllFilesMetadata } from "../../lib/mdx";
 import { orderByDates } from "../../lib/date";
 import Link from 'next/link'
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header";
 
 const isProd = process.env.NODE_ENV === 'production'
 
