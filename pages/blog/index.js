@@ -7,7 +7,6 @@ import Header from "../../components/Header";
 const isProd = process.env.NODE_ENV === 'production'
 
 const Blog = ({ posts }) => {
-    console.log(posts)
     const assetsPrefix = (isProd) ? '/alexcantongarcia/' : '/'
 
     return (
