@@ -12,52 +12,52 @@ const Footer = () => {
         <footer>
             <div className="footer-wrapper">
                 <div className="rss-content">
-                {
-                    rss.map(link => (
-                        <Link href={link.link} key={link.name} target="_blank">
-                            {link.name}
-                        </Link>
-                    ))
-                }
+                    {
+                        rss.map(link => (
+                            <Link href={link.link} key={link.name} target="_blank">
+                                {link.name}
+                            </Link>
+                        ))
+                    }
                 </div>
-            </div>
-            <div className="developedBy">
-                Created with ❤️ by <b>Alexcan.Dvlpr</b>
+                <div className="developedBy">
+                    Created with ❤️ by <b>Alexcan.Dvlpr</b>
+                </div>
             </div>
             <style jsx>{`
                 footer {
                     width: 100%;
-                    height: 45px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-content: center;
-                    padding: 5px 30px;
+                    height: 70px;
+                    margin-top: 20px;
                 }
                 footer .footer-wrapper {
                     width: 100%;
+                    height: 100%;
                     display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
-                    font-size: 1.2rem;
-                    margin-bottom: 5px;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.1rem;
                 }
                 footer .footer-wrapper .rss-content {
                     width: 25%;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-around;
-                }
-                footer .footer-wrapper a {
-                    padding: 0px 15px;
+                    align-items: center;
                 }
                 footer .developedBy {
-                    width: 100%;
-                    margin: 10px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-content: center;
+                    margin-top: 10px;
+                    padding-bottom: 10px;
+                }
+                @media only screen and (max-width: 600px) {
+                    footer .rss-content {
+                        width: 100% !important;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        padding: 0px 20px;
+                    }
                 }
             `}</style>
         </footer>
