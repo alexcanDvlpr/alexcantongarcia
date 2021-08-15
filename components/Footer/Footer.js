@@ -21,7 +21,7 @@ const Footer = () => {
                     }
                 </div>
                 <div className="developedBy">
-                    Created with ❤️ by <b>Alexcan.Dvlpr</b>
+                    Creado con ❤️ por <b>Alexcan.Dvlpr</b>
                 </div>
             </div>
         </footer>
