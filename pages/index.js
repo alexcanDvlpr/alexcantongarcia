@@ -1,9 +1,9 @@
-import CompanySection from '../components/sections/CompanySection'
-import HomeSection from '../components/sections/HomeSection'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import CompanySection from '../components/sections/CompanySection/CompanySection'
+import HomeSection from '../components/sections/HomeSection/HomeSection'
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 import React from 'react'
-import AboutSection from '../components/sections/AboutSection'
+import AboutSection from '../components/sections/AboutSection/AboutSection'
 
 export default function Home() {
   return (

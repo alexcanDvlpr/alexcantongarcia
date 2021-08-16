@@ -1,5 +1,14 @@
 @import url('./prism.css');
 
+/*  COMPONENTS  */
+@import url('../components/Footer/footer.css');
+@import url('../components/Header/header.css');
+
+/*  SECTIONS  */
+@import url('../components/sections/CompanySection/companySection.css');
+@import url('../components/sections/HomeSection/homeSection.css');
+
+/* GLOBAL STYLES */
 *,
 html,
 body {
@@ -41,38 +50,4 @@ body {
 
 a {
   outline: none;
-}
-
-/* HOME SECTION - ICON SCROLL */
-.scrolling-icon {
-  width: 100%;
-  height: 55px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.scrolling-icon .icon {
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .scrolling-icon {
-    display: none;
-  }
 }
