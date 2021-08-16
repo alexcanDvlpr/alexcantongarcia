@@ -8,7 +8,6 @@ export default class Document extends NextDocument {
         return (
             <Html lang="en">
                 <Head>
-                    <link rel="stylesheet" href="../styles/global.css" />
                     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous" />
                 </Head>
                 <body>
