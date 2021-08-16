@@ -63,6 +63,32 @@ const HomeSection = ({ }) => {
                         margin-bottom: 22px;
                     }
 
+                    .scrolling-icon {
+                        width: 100%;
+                        height: 55px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    .scrolling-icon .icon {
+                        animation: bounce 1s infinite;
+                    }
+
+                    @keyframes bounce {
+                        0% {
+                            transform: translateY(0);
+                        }
+                        50% {
+                            transform: translateY(-10px);
+                        }
+                        100% {
+                            transform: translateY(0);
+                        }
+                    }
                     @media only screen and (max-width: 600px) {
                         .homeSectionContent {
                             margin-top: 60px;
@@ -91,6 +117,10 @@ const HomeSection = ({ }) => {
                         }
 
                         .homeImageContent {
+                            display: none;
+                        }
+
+                        .scrolling-icon {
                             display: none;
                         }
                     }
