@@ -1,13 +1,11 @@
 import { Avatar, Container, Heading, Text, Wrap, Box } from "@chakra-ui/react";
+import Header from "../../components/Header/Header";
 import { getAllFilesMetadata } from "../../lib/mdx";
 import { orderByDates } from "../../lib/date";
 import Link from 'next/link'
-import Header from "../../components/Header/Header";
 
-const isProd = process.env.NODE_ENV === 'production'
 
 const Blog = ({ posts }) => {
-    const assetsPrefix = (isProd) ? '/alexcantongarcia/' : '/'
 
     return (
         <div className="main">
@@ -21,7 +19,7 @@ const Blog = ({ posts }) => {
                                 <a>
                                     <Heading as="h2" size="lg">{post.title}</Heading>
                                     <Wrap>
-                                        <Avatar size="sm" name="Alex Cantón" src={`${assetsPrefix}${post.avatar}`} />
+                                        <Avatar size="sm" name="Alex Cantón" src={`${post.avatar}`} />
                                         <Text as="p" size="sm">{post.author} - {post.date}</Text>
                                         <Text as="p" size="sm">{post.tags.join(' ')}</Text>
                                     </Wrap>
