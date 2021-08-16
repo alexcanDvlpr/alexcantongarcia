@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-css-tags */
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from '../styles/theme'
 import '../styles/globals.css'
@@ -8,6 +9,7 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={theme} initialColorMode={theme.config.initialColorMode}>
       <Head>
         <title>Bienvenido@ - Alex Cantón</title>
+        <link rel="stylesheet" href="../styles/globals.css" />
       </Head>
       <Component {...pageProps} />
     </ChakraProvider>
