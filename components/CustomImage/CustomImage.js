@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { Image, Box } from "@chakra-ui/react"
 
 const CustomImage = (props) => {
