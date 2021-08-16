@@ -1,8 +1,5 @@
 @import url('./prism.css');
 
-/* COMPONENTS */
-@import url('../components/sections/HomeSection/home.css');
-
 /* GLOBAL STYLES */
 *,
 html,
