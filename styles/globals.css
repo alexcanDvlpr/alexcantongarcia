@@ -4,6 +4,10 @@
 @import url('../components/Footer/footer.css');
 @import url('../components/Header/header.css');
 
+/*  SECTIONS  */
+@import url('../components/sections/CompanySection/companySection.css');
+@import url('../components/sections/HomeSection/homeSection.css');
+
 /* GLOBAL STYLES */
 *,
 html,
