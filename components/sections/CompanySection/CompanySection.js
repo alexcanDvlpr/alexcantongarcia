@@ -47,7 +47,6 @@ const CompanySection = () => {
                             scroll-padding: 0 50%;
                             scroll-snap-type: x mandatory;
                         }
-
                         .sliderCompanies img {
                             flex: 0 0 100%;
                             width: initial;
