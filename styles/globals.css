@@ -4,6 +4,7 @@
 @import url('../components/Footer/footer.css');
 @import url('../components/Header/header.css');
 @import url('../components/PostHead/postHead.css');
+@import url('../components/YouTubeVideo/youtubeVideo.css');
 
 /*  SECTIONS  */
 @import url('../components/sections/CompanySection/companySection.css');
