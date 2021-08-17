@@ -1,7 +1,7 @@
-import { Avatar, Container, Heading, Text, Wrap, Box } from "@chakra-ui/react";
-import Header from "../../components/Header/Header";
-import { getAllFilesMetadata } from "../../lib/mdx";
-import { orderByDates } from "../../lib/date";
+import { Avatar, Container, Heading, Text, Wrap, Box } from '@chakra-ui/react'
+import { orderByDates, formatDate } from '../../lib/date'
+import Header from '../../components/Header/Header'
+import { getAllFilesMetadata } from '../../lib/mdx'
 import Link from 'next/link'
 
 
@@ -20,7 +20,7 @@ const Blog = ({ posts }) => {
                                     <Heading as="h2" size="lg">{post.title}</Heading>
                                     <Wrap>
                                         <Avatar size="sm" name="Alex Cantón" src={`${post.avatar}`} />
-                                        <Text as="p" size="sm">{post.author} - {post.date}</Text>
+                                        <Text as="p" size="sm">{post.author} - {formatDate(post.date)}</Text>
                                         <Text as="p" size="sm">{post.tags.join(' ')}</Text>
                                     </Wrap>
                                 </a>

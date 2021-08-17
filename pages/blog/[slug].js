@@ -1,9 +1,9 @@
 import MDXComponents from '../../components/MDXComponents'
+import PostHead from '../../components/PostHead/PostHead'
 import { getFileBySlug, getFiles } from '../../lib/mdx'
 import Header from '../../components/Header/Header'
 import { Box, Container } from '@chakra-ui/react'
 import { MDXRemote } from 'next-mdx-remote'
-import PostHead from '../../components/PostHead/PostHead'
 
 const Post = ({ source, frontmatter }) => {
 
