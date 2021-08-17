@@ -1,0 +1,25 @@
+.postHeader {
+    width: 100%;
+    height: auto;
+    margin-bottom: 55px;
+}
+
+.metadata-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.author-content,
+.article-metadata-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.article-metadata-content {
+    justify-content: flex-end;
+}
