@@ -20,9 +20,9 @@ const PostHead = ({ metadata }) => {
                     <Text as="p" ml={4} fontSize="xl">{author}</Text>
                 </Box>
                 <Box className="article-metadata-content">
-                    <Text as="p" fontSize="md">📅 {formatDate(date)}</Text>
-                    <Text mx={3}>|</Text>
-                    <Text as="p" fontSize="md">{`${printMinutes(readingTime.minutes)} Minutos de lectura`}</Text>
+                    <Text className="publishOn" as="p" fontSize="md">📅 {formatDate(date)}</Text>
+                    <Text className="headSeparator" mx={3}>|</Text>
+                    <Text className="readingTime" as="p" fontSize="md">{`${printMinutes(readingTime.minutes)} Minutos de lectura`}</Text>
                 </Box>
             </Box>
             <Box mt={3}>

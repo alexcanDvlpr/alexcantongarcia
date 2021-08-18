@@ -23,3 +23,27 @@
 .article-metadata-content {
     justify-content: flex-end;
 }
+
+@media only screen and (max-width: 600px) {
+    .postHeader {
+        margin: 116px 0px 40px 0px;
+    }
+    .metadata-content {
+        flex-direction: column;
+    }
+    .author-content {
+        margin: 10px 0px;
+    }
+    .article-metadata-content {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .headSeparator {
+        display: none;
+    }
+    .readingTime,
+    .publishOn {
+        margin: 2px 0px;
+    }
+}
