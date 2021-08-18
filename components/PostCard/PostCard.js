@@ -10,7 +10,7 @@ const PostCard = ({ post }) => {
             <Link href={`/blog/${slug}`} >
                 <a>
                     <Heading as="h3" size="lg">{title}</Heading>
-                    <Wrap mt={3}>
+                    <Wrap className="post-metadata" mt={3}>
                         <Avatar size="sm" name="Alex Cantón" src={`${avatar}`} />
                         <Text as="p" size="sm">{author} - {formatDate(date)}</Text>
                         {

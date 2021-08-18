@@ -82,6 +82,11 @@ a {
   line-height: 1.7rem;
 }
 
+.post-metadata ul {
+  display: flex;
+  align-items: center;
+}
+
 @media only screen and (max-width: 600px) {
   .last-articles-container,
   .last-articles-heading, 
