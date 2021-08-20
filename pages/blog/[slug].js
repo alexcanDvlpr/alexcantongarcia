@@ -1,19 +1,20 @@
 import MDXComponents from '../../components/MDXComponents'
+import PostHead from '../../components/PostHead/PostHead'
 import { getFileBySlug, getFiles } from '../../lib/mdx'
 import Header from '../../components/Header/Header'
-import { Container } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
 import { MDXRemote } from 'next-mdx-remote'
 
 const Post = ({ source, frontmatter }) => {
-
-    let timeToRead = Math.round(frontmatter.readingTime.minutes)
-    timeToRead = (timeToRead === 0) ? 1 : timeToRead
 
     return (
         <div className="main">
             <Header showTitle={true} />
             <Container maxW="container.lg" style={{ marginTop: '78px' }}>
-                <MDXRemote {...source} components={MDXComponents} />
+                <PostHead metadata={{...frontmatter}} />
+               <Container maxW={['container.xl', 'container.xl', 'container.sm']} className="article-content" mt={8}>
+                    <MDXRemote {...source} components={MDXComponents} />
+               </Container>
             </Container>
         </div >
     )

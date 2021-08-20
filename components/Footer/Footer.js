@@ -14,7 +14,7 @@ const Footer = () => {
                 <div className="rss-content">
                     {
                         rss.map(link => (
-                            <Link href={link.link} key={link.name} target="_blank">
+                            <Link href={link.link} key={link.name} target="_blank" rel="noreferrer">
                                 {link.name}
                             </Link>
                         ))
