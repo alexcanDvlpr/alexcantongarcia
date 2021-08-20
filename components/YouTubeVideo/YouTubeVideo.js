@@ -4,7 +4,7 @@ const YoutubeVideo = ({ youtubeId, youtubeTitle }) => {
 
     return (
         <Box className="youtubeVideo-content">
-            <Box w="60%" alignItems="center" className="youtubeVideo_content">
+            <Box w="100%" alignItems="center" className="youtubeVideo_content">
                 <AspectRatio ratio={16 / 9}>
                     <iframe
                         src={`https://www.youtube.com/embed/${youtubeId}`}

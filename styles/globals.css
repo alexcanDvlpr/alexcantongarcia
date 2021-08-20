@@ -78,6 +78,12 @@ a {
   align-items: center;
 }
 
+.article-content pre {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
 .article-content p {
   line-height: 1.7rem;
 }

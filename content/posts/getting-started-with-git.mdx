@@ -35,7 +35,7 @@ fruits = fruits.map(fruit => `${fruit}!`)
 console.log(fruits) // apple!, banana!, watermelon!
 ```
 
-Y esto es uun fragmento de **JSON**
+Y esto es un fragmento de **JSON**
 
 ```json
 {
@@ -43,4 +43,27 @@ Y esto es uun fragmento de **JSON**
     "surname": "Cantón García",
     "birth": "25/11/1997"
 }
+```
+
+Ejemplo de código de un componente de **Angular**:
+
+```ts
+
+import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
+
+@Component({
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
+})
+export class NavbarComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+
 ```
