@@ -3,6 +3,8 @@
 /*  COMPONENTS  */
 @import url('../components/Footer/footer.css');
 @import url('../components/Header/header.css');
+@import url('../components/PostHead/postHead.css');
+@import url('../components/YouTubeVideo/youtubeVideo.css');
 
 /*  SECTIONS  */
 @import url('../components/sections/CompanySection/companySection.css');
@@ -50,4 +52,56 @@ body {
 
 a {
   outline: none;
+}
+
+.blog-container {
+  margin-top: 116px;
+}
+
+.last-articles-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.last-articles-content {
+  width: 65%;
+}
+
+.last-articles-heading {
+  width: 65%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.article-content pre {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+.article-content p {
+  line-height: 1.7rem;
+}
+
+.post-metadata ul {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .last-articles-container,
+  .last-articles-heading, 
+  .last-articles-content {
+    width: 100%;
+    padding: 0px 15px;
+  }
+  .last-articles-content {
+    width: 100%;
+    padding: 0px 15px;
+  }
 }

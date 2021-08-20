@@ -9,8 +9,10 @@ const Header = ({ showTitle = false }) => {
         { href: '/blog', name: 'Blog' }
     ]
 
+    const blogHeader = (showTitle) ? 'blogHeader' : ''
+
     return (
-        <header>
+        <header className={blogHeader}>
             <nav>
                 <span className="headerName">
                     {
