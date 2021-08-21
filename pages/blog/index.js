@@ -4,10 +4,8 @@ import { orderByDates } from '../../lib/date'
 import Header from '../../components/Header/Header'
 import { getAllFilesMetadata } from '../../lib/mdx'
 
-
 const Blog = ({ posts }) => {
-
-    return (
+  return (
         <div className="main">
             <Header showTitle={true} />
             <Container maxW="container.lg" className="blog-container">
@@ -25,18 +23,18 @@ const Blog = ({ posts }) => {
                 </Center>
             </Container>
         </div>
-    )
+  )
 }
 
-export default Blog;
+export default Blog
 
-export async function getStaticProps() {
-    const posts = await getAllFilesMetadata()
-    posts.sort(orderByDates)
+export async function getStaticProps () {
+  const posts = await getAllFilesMetadata()
+  posts.sort(orderByDates)
 
-    return {
-        props: {
-            posts
-        }
+  return {
+    props: {
+      posts
     }
+  }
 }

@@ -1,24 +1,23 @@
-import ToggleThemeColorButton from "../ToggleTheme/ToggleThemeColorButton"
+import ToggleThemeColorButton from '../ToggleTheme/ToggleThemeColorButton'
 
-const { Link, Heading } = require("@chakra-ui/react")
+const { Link, Heading } = require('@chakra-ui/react')
 
 const Header = ({ showTitle = false }) => {
+  const navbarRoutes = [
+    { href: '/', name: 'Inicio' },
+    { href: '/blog', name: 'Blog' }
+  ]
 
-    const navbarRoutes = [
-        { href: '/', name: 'Inicio' },
-        { href: '/blog', name: 'Blog' }
-    ]
+  const blogHeader = (showTitle) ? 'blogHeader' : ''
 
-    const blogHeader = (showTitle) ? 'blogHeader' : ''
-
-    return (
+  return (
         <header className={blogHeader}>
             <nav>
                 <span className="headerName">
                     {
-                        showTitle ?
-                            <Heading as="h1" size="lg">Alex Cantón</Heading> :
-                            ''
+                        showTitle
+                          ? <Heading as="h1" size="lg">Alex Cantón</Heading>
+                          : ''
                     }
                 </span>
                 <ul className="nav-wrapper">
@@ -37,7 +36,7 @@ const Header = ({ showTitle = false }) => {
                 </ul>
             </nav>
         </header>
-    )
+  )
 }
 
 export default Header
