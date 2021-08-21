@@ -98,4 +98,8 @@
     .scrolling-icon {
         display: none;
     }
+
+    .homeText {
+        width: 100%;
+    }
 }
