@@ -1,14 +1,13 @@
-import { Link } from "@chakra-ui/react"
+import { Link } from '@chakra-ui/react'
 
 const Footer = () => {
+  const rss = [
+    { link: 'https://twitter.com/AlexcanDvlpr', name: 'Twitter' },
+    { link: 'https://www.linkedin.com/in/alejandro-cant%C3%B3n-garc%C3%ADa-2a5b7311a/', name: 'Linkedin' },
+    { link: 'https://github.com/alexcanDvlpr', name: 'Github' }
+  ]
 
-    const rss = [
-        { link: 'https://twitter.com/AlexcanDvlpr', name: 'Twitter' },
-        { link: 'https://www.linkedin.com/in/alejandro-cant%C3%B3n-garc%C3%ADa-2a5b7311a/', name: 'Linkedin' },
-        { link: 'https://github.com/alexcanDvlpr', name: 'Github' },
-    ]
-
-    return (
+  return (
         <footer>
             <div className="footer-wrapper">
                 <div className="rss-content">
@@ -25,7 +24,7 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
-    )
+  )
 }
 
 export default Footer

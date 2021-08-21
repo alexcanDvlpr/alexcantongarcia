@@ -1,13 +1,11 @@
-/* eslint-disable jsx-a11y/alt-text */
-import { Image, Box } from "@chakra-ui/react"
+import { Image, Box } from '@chakra-ui/react'
 
 const CustomImage = (props) => {
-
-    return (
+  return (
         <Box mb={8} boxShadow="md" borderWidth="1px" p="6" rounded="md" bg="white">
             <Image {...props} />
         </Box>
-    );
-};
+  )
+}
 
 export default CustomImage

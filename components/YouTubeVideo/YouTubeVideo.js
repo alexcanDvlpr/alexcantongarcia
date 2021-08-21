@@ -1,8 +1,7 @@
-import { AspectRatio, Box } from "@chakra-ui/react"
+import { AspectRatio, Box } from '@chakra-ui/react'
 
 const YoutubeVideo = ({ youtubeId, youtubeTitle }) => {
-
-    return (
+  return (
         <Box className="youtubeVideo-content">
             <Box w="100%" alignItems="center" className="youtubeVideo_content">
                 <AspectRatio ratio={16 / 9}>
@@ -13,7 +12,7 @@ const YoutubeVideo = ({ youtubeId, youtubeTitle }) => {
                 </AspectRatio>
             </Box>
         </Box>
-    )
+  )
 }
 
 export default YoutubeVideo

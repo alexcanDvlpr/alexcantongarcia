@@ -1,10 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { Heading, Text } from '@chakra-ui/react'
 import ScrollingIcon from '../../icons/ScrollingIcon'
 
-const HomeSection = ({ }) => {
-    return (
+const HomeSection = () => {
+  return (
         <section className="homeSectionContent">
             <div className="homeImageContent">
                 <img src="/avatar/alex.jpg" alt="123" />
@@ -22,7 +21,7 @@ const HomeSection = ({ }) => {
                 </div>
             </div>
         </section>
-    )
+  )
 }
 
 export default HomeSection

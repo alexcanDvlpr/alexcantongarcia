@@ -3,9 +3,9 @@ import { formatDate } from '../../lib/date'
 import Link from 'next/link'
 
 const PostCard = ({ post }) => {
-    const { title, avatar, slug, author, date, tags } = post
+  const { title, avatar, slug, author, date, tags } = post
 
-    return (
+  return (
         <Box my={8}>
             <Link href={`/blog/${slug}`} >
                 <a>
@@ -22,7 +22,7 @@ const PostCard = ({ post }) => {
                 </a>
             </Link>
         </Box>
-    )
+  )
 }
 
 export default PostCard
