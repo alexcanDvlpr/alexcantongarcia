@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
-function SunIcon() {
-    return (
+function SunIcon () {
+  return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
             enableBackground="new 0 0 512 512"
@@ -17,7 +17,7 @@ function SunIcon() {
                 d="M256 111.18c-5.242 0-10.418.286-15.516.828 72.685 7.743 129.303 69.252 129.303 143.991s-56.619 136.249-129.303 143.992c5.098.544 10.273.828 15.516.828 79.982 0 144.82-64.838 144.82-144.82S335.983 111.18 256 111.18z"
             ></path>
         </svg>
-    );
+  )
 }
 
-export default SunIcon;
+export default SunIcon

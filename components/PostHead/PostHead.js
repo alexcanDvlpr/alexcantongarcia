@@ -2,16 +2,16 @@ import { Box, Text, Avatar, Tag, Heading } from '@chakra-ui/react'
 import { formatDate } from '../../lib/date'
 
 const PostHead = ({ metadata }) => {
-    const { author = '', avatar = '', date = '', readingTime, tags, title = '' } = metadata
+  const { author = '', avatar = '', date = '', readingTime, tags, title = '' } = metadata
 
-    let timeToRead = Math.round(readingTime.minutes)
-    timeToRead = (timeToRead === 0) ? 1 : timeToRead
+  let timeToRead = Math.round(readingTime.minutes)
+  timeToRead = (timeToRead === 0) ? 1 : timeToRead
 
-    const printMinutes = (minutes) => {
-        return Math.trunc(minutes) + 1
-    }
+  const printMinutes = (minutes) => {
+    return Math.trunc(minutes) + 1
+  }
 
-    return (
+  return (
         <Box className="postHeader">
             <Heading as="h1" size="2xl">{title}</Heading>
             <Box className="metadata-content" mt={3}>
@@ -22,7 +22,7 @@ const PostHead = ({ metadata }) => {
                 <Box className="article-metadata-content">
                     <Text className="publishOn" as="p" fontSize="md">📅 {formatDate(date)}</Text>
                     <Text className="headSeparator" mx={3}>|</Text>
-                    <Text className="readingTime" as="p" fontSize="md">{`${printMinutes(readingTime.minutes)} Minutos de lectura`}</Text>
+                    <Text className="readingTime" as="p" fontSize="md">{`${printMinutes(timeToRead)} Minutos de lectura`}</Text>
                 </Box>
             </Box>
             <Box mt={3}>
@@ -33,7 +33,7 @@ const PostHead = ({ metadata }) => {
                 }
             </Box>
         </Box>
-    )
+  )
 }
 
 export default PostHead

@@ -1,7 +1,6 @@
 
 const Separator = () => {
-
-    return (<hr />)
+  return (<hr />)
 }
 
 export default Separator
