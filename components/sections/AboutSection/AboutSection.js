@@ -3,7 +3,7 @@ import { Container, Heading, Text } from '@chakra-ui/react'
 const AboutSection = () => {
   return (
         <Container className="aboutSection" my={8} maxW="container.md">
-            <Heading as="h3" mb={4} size="xl">Sobre mí</Heading>
+            <Heading as="h2" mb={4} size="xl">Sobre mí</Heading>
             <Text mt={2} fontSize="2xl">
                 Como ya sabrás soy <b>Alex</b> y te quiero dar la bienvenida a mi web.
             </Text>
