@@ -6,5 +6,39 @@ date: '2021-08-21'
 tags:
     - 'Git'
     - 'Github'
+    - 'GitLab'
 ---
 
+Lo más normal actualmente, cuando creamos un software o entramos en un equipo de desarrollo, es que tengamos el código de nuestro proyecto centralizado y controlado, es decir, saber qué cambios se han hecho, cuándo y por quién. Principalmente porque si desarrollamos el típico `Hola Mundo` no tiene mucho sentido, pero si estas en un proyecto amplio y con más compañeros puede ser de lo mas socorrido.
+
+Para poder tener nuestro código salvaje bajo control, podemos usar un **Control de Versiones**
+
+## ¿Qué es un Control de Versiones?
+
+Como su nombre indica, es un sistema para tener control sobre las distintas versiones que se puedan tener de nuestro software. Quizá queremos ver el primer cambio (commit) que hicimos y deshacerlo, pues con un control de veriones es posible, uno de los más conocidos es **Git**.
+
+## ¿Qué es Git?
+
+Git es a día de hoy, el sistema de control de versiones más conocido y usado del mundo, creado por **Linus Torvals**, desarrollador del Kernel de Linux. Su principal característica es que es **distribuido**, esto quiere decir que múltiples personas pueden trabajar en equipos sobre un mismo proyecto.
+
+En este post, te voy a dejar algunos de los comandos más básicos y que necesitas saber para empezar a trabajar con Git.
+
+## ¿Cómo empezar?
+
+Como he dicho, se puede usar Git con más compañeros de equipo, esto quiere decir, que tendremos que tener nuestro código "en la nube". Para esto existen distintos proveedores de repositorios de código, que no dejan de ser almacenes de código creados por organizaciones o por nosotros mismos.
+
+Hay muchos proveedores, pero los más conocidos son [GitHub](https://github.com/) y [GitLab](https://about.gitlab.com/) elige el que más te guste, crea un perfil y crea algo que nos deje ojipláticos 👀.
+
+Posiblemente todo lo que te he contado hasta ahora ya lo sepas, y solo quieres aprender los comandos básicos, pues no te voy a hacer esperar más.
+
+### git clone
+
+Con este comando nos descargaremos un proyecto que ya resida en uno de los proveedores anteriormente comentados, para descargarlo en local simplemente necesitaremos la URL del proyecto, disponible en el repositorio, por ejemplo de GitHub:
+
+![URL Clone](/images/posts/empezar-con-git-en-2021/clone.JPG)
+
+En este caso, copiamos la URL y ejecutamos en una consola:
+
+```shell
+git clone <url_proyecto>
+```
