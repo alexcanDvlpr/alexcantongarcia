@@ -12,7 +12,7 @@ export default {
   h4: (props) => <Heading as="h4" mt={8} size="xl" {...props} />,
   h5: (props) => <Heading as="h5" mt={8} size="lg" {...props} />,
   h6: (props) => <Heading as="h6" mt={8} size="md" {...props} />,
-  p: (props) => <Text fontSize="xl" lineHeight={5} my={4} {...props} />,
+  p: (props) => <Text fontSize="lg" lineHeight={5} my={4} {...props} />,
   img: (props) => <Image {...props} />,
   Separator,
   YoutubeVideo,
