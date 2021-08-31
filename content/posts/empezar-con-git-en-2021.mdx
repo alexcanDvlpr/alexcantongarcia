@@ -5,7 +5,7 @@ avatar: 'avatar/alex.jpg'
 date: '2021-08-21'
 tags:
     - 'Git'
-    - 'Github'
+    - 'GitHub'
     - 'GitLab'
 ---
 
@@ -15,7 +15,7 @@ Para poder tener nuestro código salvaje bajo control, podemos usar un **Control
 
 ## ¿Qué es un Control de Versiones?
 
-Como su nombre indica, es un sistema para tener control sobre las distintas versiones que se puedan tener de nuestro software. Quizá queremos ver el primer cambio (commit) que hicimos y deshacerlo, pues con un control de veriones es posible, uno de los más conocidos es **Git**.
+Como su nombre indica, es un sistema para tener control sobre las distintas versiones que se puedan tener de nuestro software. Quizá queremos ver el primer cambio (commit) que hicimos y deshacerlo, pues con un control de veriones es posible, uno de los más conocidos y potentes es **Git**.
 
 ## ¿Qué es Git?
 
@@ -48,3 +48,69 @@ Si por cualquier razón, no queremos que el proyecto en local se llame igual que
 ```shell
 git clone <url_proyecto> <alias_proyecto>
 ```
+
+### git init y git remote
+
+Sin embargo, si lo que queremos hacer es crear un proyecto totalmente nuevo y gestionarlo con git, tendremos que acceder a la raíz de nuestro proyecto e inicializar git, para ello ejecutaremos el siguiente comando:
+
+```shell
+git init
+```
+
+Una vez ejecutado, se generará un directorio en la raíz llamado `.git`, en este directorio se almacenará toda la información, como pueden ser las conexiones remotas, las ramas locales etc.
+
+En cambio, inicializar un proyecto de git, solo nos sirve para operar en local, si queremos subir nuestro cóodigo a un repositorio en remoto hay que conectar nuestro repositorio local con el remoto de la siguiente manera:
+
+```shell
+git remote add <origen> <url_proyecto>
+```
+
+Normalmente por nomenclatura, el origen del repo suele ser **origin** (de origen), pero puedes tener más conexiones remotas, como por ejemplo origin para el desarrollo en local y otro repositorio remoto que sea del cliente que le llames delivery.
+
+### git add
+
+Cuando en nuestro proyecto hemos hecho cambios o añadido nuevos ficheros, y los queremos añadir a la fase de preparación de git, tendremos que usar el comando `add` con un parametro, nombre o nombres de los ficheros que queremos añadir o un `.` para añadir todo.
+
+```shell
+# Por ficheros
+git add archivo1.txt test/test1.js
+
+# Añadir todo
+git add . 
+```
+
+Este paso nos permite poder crear un commit (un mensaje descriptivo) a esos cambios.
+
+### git commit
+
+Este comando nos ayuda a añadir un mensaje descriptivo de los cambios realizados y añadido con el comanndo `git add`. Los mensajes de commit, dan para otro artículo extenso, pero un buen commit tiene que explicar de forma breve y concisa qué hacen esos cambios que se han realizado, por pocos o muchos que sean. 
+
+Si ejecutamos directamente `git commit` se nos abrirá el editor de texto que tengamoss configurado por defecto, como pueden ser nano, **vi**, **vim** o **VSCode** y ahí podremos escribir nuestro commit, sin embargo, si el commit va a ser un mensaje relativamente corto, podemos usar el flag `-m`:
+
+```shell
+git commit -m "Aqui iría nuestro mensaje descriptivo de nuestros cambios"
+```
+
+Con esto ya tendríamos los cambios preparados y descritos, el siguiente paso sería subirlo a nuestro repositorio.
+
+### git push
+
+El comando `git push` es el que usaremos para poder subir nuestros cambios ya preparados a nueustro repositorio remoto, previamente configurado con `git remote`
+
+Una vez tengamos los cambios preparados y descritos correctamente con un commit, ejecutaremos:
+
+```shell
+git push <nombre_origen> <nombre_rama>
+```
+
+Y esto subirá los cambios a nuestro repositorio remoto, al origen y rama que le indiquemos, como podría ser lo siguiente:
+
+```shell
+git push origin master
+```
+
+
+
+
+### Conclusión
+Git es un sistema de control de versiones tan amplio como complejo, pero empezar es tan simple como conocer estos comandos. Con estos comandos ya puedes empezar a familiarizarte con el sistema de git, la consola de comandos, con algún proveedor como **GitHub** y **GitLab** experimentar y una vez dominemos esto, seguir ampliando conocimientos dentro de este sistema de control de versiones.
