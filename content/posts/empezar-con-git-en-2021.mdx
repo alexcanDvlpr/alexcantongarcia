@@ -59,7 +59,7 @@ git init
 
 Una vez ejecutado, se generará un directorio en la raíz llamado `.git`, en este directorio se almacenará toda la información, como pueden ser las conexiones remotas, las ramas locales etc.
 
-En cambio, inicializar un proyecto de git, solo nos sirve para operar en local, si queremos subir nuestro cóodigo a un repositorio en remoto hay que conectar nuestro repositorio local con el remoto de la siguiente manera:
+En cambio, iniciar un proyecto de git, solo nos sirve para operar en local, si queremos subir nuestro cóodigo a un repositorio en remoto hay que conectar nuestro repositorio local con el remoto de la siguiente manera:
 
 ```shell
 git remote add <origen> <url_proyecto>
@@ -83,9 +83,9 @@ Este paso nos permite poder crear un commit (un mensaje descriptivo) a esos camb
 
 ### git commit
 
-Este comando nos ayuda a añadir un mensaje descriptivo de los cambios realizados y añadido con el comanndo `git add`. Los mensajes de commit, dan para otro artículo extenso, pero un buen commit tiene que explicar de forma breve y concisa qué hacen esos cambios que se han realizado, por pocos o muchos que sean. 
+Este comando nos ayuda a añadir un mensaje descriptivo de los cambios realizados y añadido con el comando `git add`. Los mensajes de commit, dan para otro artículo extenso, pero un buen commit tiene que explicar de forma breve y concisa qué hacen esos cambios que se han realizado, por pocos o muchos que sean. 
 
-Si ejecutamos directamente `git commit` se nos abrirá el editor de texto que tengamoss configurado por defecto, como pueden ser nano, **vi**, **vim** o **VSCode** y ahí podremos escribir nuestro commit, sin embargo, si el commit va a ser un mensaje relativamente corto, podemos usar el flag `-m`:
+Si ejecutamos directamente `git commit` se nos abrirá el editor de texto que tengamos configurado por defecto, como pueden ser nano, **vi**, **vim** o **VSCode** y ahí podremos escribir nuestro commit, sin embargo, si el commit va a ser un mensaje relativamente corto, podemos usar el flag `-m`:
 
 ```shell
 git commit -m "Aqui iría nuestro mensaje descriptivo de nuestros cambios"
@@ -95,7 +95,7 @@ Con esto ya tendríamos los cambios preparados y descritos, el siguiente paso se
 
 ### git push
 
-El comando `git push` es el que usaremos para poder subir nuestros cambios ya preparados a nueustro repositorio remoto, previamente configurado con `git remote`
+El comando `git push` es el que usaremos para poder subir nuestros cambios ya preparados a nuestro repositorio remoto, previamente configurado con `git remote`
 
 Una vez tengamos los cambios preparados y descritos correctamente con un commit, ejecutaremos:
 
