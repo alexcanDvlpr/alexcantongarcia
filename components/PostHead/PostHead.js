@@ -8,7 +8,7 @@ const PostHead = ({ metadata }) => {
   timeToRead = (timeToRead === 0) ? 1 : timeToRead
 
   const printMinutes = (minutes) => {
-    return Math.trunc(minutes) + 1
+    return Math.trunc(minutes)
   }
 
   return (
