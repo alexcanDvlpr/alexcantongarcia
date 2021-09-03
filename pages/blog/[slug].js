@@ -11,7 +11,7 @@ const Post = ({ source, frontmatter }) => {
             <Header showTitle={true} />
             <Container maxW="container.lg" style={{ marginTop: '78px' }}>
                 <PostHead metadata={{ ...frontmatter }} />
-               <Container maxW={['container.xl', 'container.xl', 'container.sm']} className="article-content" mt={8}>
+               <Container maxW={['container.xl', 'container.xl', 'container.sm']} className="article-content" my={8}>
                     <MDXRemote {...source} components={MDXComponents} />
                </Container>
             </Container>
