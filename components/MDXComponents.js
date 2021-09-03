@@ -2,8 +2,8 @@
 import YoutubeVideo from './YouTubeVideo/YouTubeVideo'
 import CustomImage from './CustomImage/CustomImage'
 import ArticleLink from './ArticleLink/ArticleLink'
-import { Heading, Text } from '@chakra-ui/react'
 import Blockquote from './Blockquote/Blockquote'
+import { Heading, Text } from '@chakra-ui/react'
 import Separator from './Separator/Separator'
 
 // eslint-disable-next-line import/no-anonymous-default-export
