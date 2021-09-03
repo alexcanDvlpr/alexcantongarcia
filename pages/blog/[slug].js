@@ -7,15 +7,15 @@ import { MDXRemote } from 'next-mdx-remote'
 
 const Post = ({ source, frontmatter }) => {
   return (
-        <div className="main">
-            <Header showTitle={true} />
-            <Container maxW="container.lg" style={{ marginTop: '78px' }}>
-                <PostHead metadata={{ ...frontmatter }} />
-               <Container maxW={['container.xl', 'container.xl', 'container.sm']} className="article-content" my={8}>
-                    <MDXRemote {...source} components={MDXComponents} />
-               </Container>
-            </Container>
-        </div >
+    <div className="main">
+      <Header showTitle={true} />
+      <Container as="section" maxW="container.lg" style={{ marginTop: '78px' }}>
+        <PostHead metadata={{ ...frontmatter }} />
+        <Container as="article" maxW={['container.xl', 'container.xl', '740px']} className="article-content" my={8}>
+          <MDXRemote {...source} components={MDXComponents} />
+        </Container>
+      </Container>
+    </div >
   )
 }
 

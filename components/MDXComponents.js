@@ -1,9 +1,10 @@
 /* eslint-disable react/display-name */
-import { Heading, Text } from '@chakra-ui/react'
 import YoutubeVideo from './YouTubeVideo/YouTubeVideo'
-import Separator from './Separator/Separator'
 import CustomImage from './CustomImage/CustomImage'
+import ArticleLink from './ArticleLink/ArticleLink'
+import { Heading, Text } from '@chakra-ui/react'
 import Blockquote from './Blockquote/Blockquote'
+import Separator from './Separator/Separator'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -14,6 +15,7 @@ export default {
   h5: (props) => <Heading as="h5" mt={3} size="lg" {...props} />,
   h6: (props) => <Heading as="h6" mt={3} size="md" {...props} />,
   p: (props) => <Text fontSize="xl" lineHeight={5} my={4} {...props} />,
+  a: (props) => <ArticleLink {...props} />,
   img: (props) => <CustomImage {...props} />,
   Separator,
   YoutubeVideo,
