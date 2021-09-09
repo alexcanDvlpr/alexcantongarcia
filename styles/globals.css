@@ -1,9 +1,14 @@
 @import url('./prism.css');
 
+:root{
+  --green-primary: #00c896;
+} 
+
 /*  COMPONENTS  */
 @import url('../components/Footer/footer.css');
 @import url('../components/Header/header.css');
 @import url('../components/PostHead/postHead.css');
+@import url('../components/Blockquote/blockquote.css');
 @import url('../components/YouTubeVideo/youtubeVideo.css');
 
 /*  SECTIONS  */
@@ -50,7 +55,9 @@ body {
   grid-template-columns: 1fr;
 }
 
-a {
+a,
+a:active,
+a:focus {
   outline: none;
 }
 
@@ -91,6 +98,22 @@ a {
 .post-metadata ul {
   display: flex;
   align-items: center;
+}
+
+a.article-link {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a.article-link:hover {
+  text-decoration: none;
+}
+
+p code {
+  padding: 0px 5px;
+  background-color: #011627;
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 @media only screen and (max-width: 600px) {
