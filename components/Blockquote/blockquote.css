@@ -1,0 +1,6 @@
+blockquote.blockquote {
+    border-left: 5px solid #00c896;
+    margin: 38px 0px;
+    padding-left: 10px;
+    text-align: justify;
+}
