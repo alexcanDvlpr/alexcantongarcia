@@ -1,9 +1,14 @@
 @import url('./prism.css');
 
+:root{
+  --green-primary: #00c896;
+} 
+
 /*  COMPONENTS  */
 @import url('../components/Footer/footer.css');
 @import url('../components/Header/header.css');
 @import url('../components/PostHead/postHead.css');
+@import url('../components/Blockquote/blockquote.css');
 @import url('../components/YouTubeVideo/youtubeVideo.css');
 
 /*  SECTIONS  */
