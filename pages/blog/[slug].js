@@ -2,6 +2,7 @@ import MDXComponents from '../../components/MDXComponents'
 import PostHead from '../../components/PostHead/PostHead'
 import { getFileBySlug, getFiles } from '../../lib/mdx'
 import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
 import { Container } from '@chakra-ui/react'
 import { MDXRemote } from 'next-mdx-remote'
 
@@ -15,6 +16,7 @@ const Post = ({ source, frontmatter }) => {
           <MDXRemote {...source} components={MDXComponents} />
         </Container>
       </Container>
+      <Footer />
     </div >
   )
 }
