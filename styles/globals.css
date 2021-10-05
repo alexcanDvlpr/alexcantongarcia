@@ -116,6 +116,19 @@ p code {
   color: rgba(255, 255, 255, 0.92);
 }
 
+.aboutme__section .aboutme__content {
+  border-radius: 5px;
+  background: transparent;
+  /*background-color: #011627;*/
+  padding: 20px 40px;
+  margin-top: 78px;
+  margin-bottom: 25px;
+}
+
+.aboutme__content > * {
+  line-height: 1.55rem !important;
+}
+
 @media only screen and (max-width: 600px) {
   .last-articles-container,
   .last-articles-heading, 

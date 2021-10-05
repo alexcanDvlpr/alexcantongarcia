@@ -1,10 +1,10 @@
 import ToggleThemeColorButton from '../ToggleTheme/ToggleThemeColorButton'
-
-const { Link, Heading } = require('@chakra-ui/react')
+import { Link, Heading } from '@chakra-ui/react'
 
 const Header = ({ showTitle = false }) => {
   const navbarRoutes = [
     { href: '/', name: 'Inicio' },
+    { href: '/about', name: 'Sobre mí' },
     { href: '/blog', name: 'Blog' }
   ]
 
