@@ -13,10 +13,11 @@ const PostHead = ({ metadata }) => {
 
   return (
         <Box className="postHeader">
+            <hr className="singleArticleSeparator" />
             <Heading as="h1" size="2xl">{title}</Heading>
             <Box className="metadata-content" mt={3}>
                 <Box className="author-content">
-                    <Avatar size="sm" name="Segun Adebayo" src={`/${avatar}`} />
+                    <Avatar size="sm" name={author} src={`/${avatar}`} />
                     <Text as="p" ml={4} fontSize="lg">{author}</Text>
                 </Box>
                 <Box className="article-metadata-content">
