@@ -1,7 +1,6 @@
 /* eslint-disable react/display-name */
 import YoutubeVideo from './YouTubeVideo/YouTubeVideo'
 import CustomImage from './CustomImage/CustomImage'
-import ArticleLink from './ArticleLink/ArticleLink'
 import Blockquote from './Blockquote/Blockquote'
 import { Heading, Text } from '@chakra-ui/react'
 import Separator from './Separator/Separator'
@@ -15,7 +14,7 @@ export default {
   h5: (props) => <Heading as="h5" mt={3} size="lg" {...props} />,
   h6: (props) => <Heading as="h6" mt={3} size="md" {...props} />,
   p: (props) => <Text fontSize="lg" lineHeight={5} my={4} {...props} />,
-  a: (props) => <ArticleLink {...props} />,
+  a: (props) => <a {...props} className="article-link" target="_blank" rel="noreferrer">{props.children}</a>,
   img: (props) => <CustomImage {...props} />,
   Separator,
   YoutubeVideo,

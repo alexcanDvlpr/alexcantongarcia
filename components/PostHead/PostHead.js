@@ -17,7 +17,7 @@ const PostHead = ({ metadata }) => {
             <Box className="metadata-content" mt={3}>
                 <Box className="author-content">
                     <Avatar size="sm" name="Segun Adebayo" src={`/${avatar}`} />
-                    <Text as="p" ml={4} fontSize="xl">{author}</Text>
+                    <Text as="p" ml={4} fontSize="lg">{author}</Text>
                 </Box>
                 <Box className="article-metadata-content">
                     <Text className="publishOn" as="p" fontSize="md">📅 {formatDate(date)}</Text>

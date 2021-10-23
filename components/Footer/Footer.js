@@ -24,7 +24,7 @@ const Footer = () => {
                 </Center>
                 <Center mt={7}>
                     <Grid>
-                        <Text fontSize="xl">Creado con ❤️ por Alex Cantón</Text>
+                        <Text fontSize="lg">Creado con ❤️ por Alex Cantón</Text>
                     </Grid>
                 </Center>
             </Container>

@@ -143,4 +143,7 @@ p code {
     margin: 25px 0 0 0;
     grid-template-columns: repeat(1, 1fr) !important;
   }
+  .aboutme__section .aboutme__content {
+    padding: 20px 10px;
+  }
 }
