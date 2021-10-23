@@ -1,10 +1,15 @@
-import { Image, Box } from '@chakra-ui/react'
+import { Image, Box, Text, Center } from '@chakra-ui/react'
 
 const CustomImage = (props) => {
+  setTimeout(() => { console.clear() }, 250)
+
   return (
-        <Box mb={8} boxShadow="md" borderWidth="1px" p="6" rounded="md" bg="white">
-            <Image {...props} />
-        </Box>
+    <Box mb={8} boxShadow="md" borderWidth="1px" p="6" rounded="md" bg="white">
+      <Image {...props} />
+      <Center>
+        <Text fontSize="sm" color="#011627" className="customImage__alt">{props.alt}</Text>
+      </Center>
+    </Box>
   )
 }
 

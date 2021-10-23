@@ -7,7 +7,7 @@ function MyApp ({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme} initialColorMode={theme.config.initialColorMode}>
       <Head>
-        <title>Bienvenido@ - Alex Cantón</title>
+        <title>Alex Cantón</title>
       </Head>
       <Component {...pageProps} />
     </ChakraProvider>

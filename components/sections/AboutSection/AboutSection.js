@@ -14,7 +14,7 @@ const AboutSection = () => {
                 Desde la cuarentena que pasamos por el Covid, saco tiempo para aprender React, Docker 🐳 y sobre arquitectura de software y cloud. ☁️
             </Text>
             <Text mt={3} fontSize="2xl">
-                En lo personal, me gusta jugar videojuegos 🕹️, aprender cosas nuevas (no todo es programar), el Baloncesto 🏀 y la cerveza artesana 🍺, aunque si esta se le añade buena compañía mejor que mejor.
+                En lo personal, me gusta jugar videojuegos 🕹️, aprender cosas nuevas (no todo es programar), el Baloncesto 🏀 y disfrutar de una buena cerveza artesana 🍺.
             </Text>
         </Container>
   )
