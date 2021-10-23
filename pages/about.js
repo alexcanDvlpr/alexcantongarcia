@@ -11,7 +11,7 @@ const About = ({ source }) => {
       <div className="main">
         <Header showTitle={true} />
         <Container className="aboutme__section" as="section" maxW="container.lg" >
-          <Grid templateColumns="repeat(8, 1fr)" gap={2}>
+          <Grid className="aboutme__grid" templateColumns="repeat(8, 1fr)" gap={2}>
             <GridItem colSpan="1"></GridItem>
             <GridItem className="aboutme__content" px={5} colSpan="6" bg="red.100">
               <MDXRemote {...source} components={MDXComponents} />

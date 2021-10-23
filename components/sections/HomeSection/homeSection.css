@@ -64,11 +64,8 @@
         transform: translateY(0);
     }
 }
-@media only screen and (max-width: 600px) {
-    .homeSectionContent {
-        margin-top: 60px;
-    }
 
+@media only screen and (max-width: 600px) {
     .homeTitleContent {
         width: 90%;
         height: auto;

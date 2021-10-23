@@ -119,7 +119,6 @@ p code {
 .aboutme__section .aboutme__content {
   border-radius: 5px;
   background: transparent;
-  /*background-color: #011627;*/
   padding: 20px 40px;
   margin-top: 78px;
   margin-bottom: 25px;
@@ -139,5 +138,9 @@ p code {
   .last-articles-content {
     width: 100%;
     padding: 0px 15px;
+  }
+  .aboutme__grid {
+    margin: 25px 0 0 0;
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
