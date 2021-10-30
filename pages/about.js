@@ -1,4 +1,5 @@
 import { Container, Grid, GridItem } from '@chakra-ui/react'
+import AlexCantonHead from '../components/AlexCantonHead'
 import MDXComponents from '../components/MDXComponents'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
@@ -8,6 +9,7 @@ import { getFileBySlug } from '../lib/mdx'
 const About = ({ source }) => {
   return (
     <>
+      <AlexCantonHead index="true" title="Sobre mí | Alex Cantón" />
       <div className="main">
         <Header showTitle={true} />
         <Container className="aboutme__section" as="section" maxW="container.lg" >
