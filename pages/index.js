@@ -9,7 +9,7 @@ import React from 'react'
 export default function Home () {
   return (
     <>
-      <AlexCantonHead index="true" />
+      <AlexCantonHead index="true" title="¡Hola! Soy Alex Cantón" />
       <div className="main">
         <Header />
         <div className="main-wrapper">

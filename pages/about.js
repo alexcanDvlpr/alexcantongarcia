@@ -9,7 +9,7 @@ import { getFileBySlug } from '../lib/mdx'
 const About = ({ source }) => {
   return (
     <>
-      <AlexCantonHead index="true" />
+      <AlexCantonHead index="true" title="Sobre mí | Alex Cantón" />
       <div className="main">
         <Header showTitle={true} />
         <Container className="aboutme__section" as="section" maxW="container.lg" >
