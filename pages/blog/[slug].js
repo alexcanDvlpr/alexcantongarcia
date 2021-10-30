@@ -8,6 +8,7 @@ import { MDXRemote } from 'next-mdx-remote'
 
 const Post = ({ source, frontmatter }) => {
   return (
+    <>
     <div className="main">
       <Header showTitle={true} />
       <Container as="section" maxW="container.lg" style={{ marginTop: '78px' }}>
@@ -18,6 +19,7 @@ const Post = ({ source, frontmatter }) => {
       </Container>
       <Footer />
     </div >
+    </>
   )
 }
 
