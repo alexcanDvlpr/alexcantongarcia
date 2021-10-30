@@ -9,6 +9,7 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
+    padding-top: 10px;
 }
 
 nav {
@@ -38,6 +39,9 @@ nav {
     font-weight: 500;
 }
 @media only screen and (max-width: 600px) {
+    header {
+        padding-top: 0px;
+    }
     nav {
         flex-direction: column;
         padding: 0px 5px;
