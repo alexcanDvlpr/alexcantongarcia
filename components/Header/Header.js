@@ -1,38 +1,35 @@
 import ToggleThemeColorButton from '../ToggleTheme/ToggleThemeColorButton'
-
-const { Link, Heading } = require('@chakra-ui/react')
+import { Link, Heading } from '@chakra-ui/react'
+import { routes } from '../../data/menu_items'
 
 const Header = ({ showTitle = false }) => {
-  const navbarRoutes = [
-    { href: '/', name: 'Inicio' },
-    { href: '/blog', name: 'Blog' }
-  ]
-
   const blogHeader = (showTitle) ? 'blogHeader' : ''
+  const hasTitle = (showTitle) ? 'hasTitle' : ''
 
   return (
         <header className={blogHeader}>
             <nav>
-                <span className="headerName">
+                {
+                    showTitle &&
+                    (
+                        <span id="headerName" className="headerName">
+                            <Heading as="h1" size="xl">Alex Cantón</Heading>
+                        </span>
+                    )
+                }
+                <ul className={`nav-wrapper ${hasTitle}`}>
                     {
-                        showTitle
-                          ? <Heading as="h1" size="lg">Alex Cantón</Heading>
-                          : ''
+                        routes.map(link => (
+                            <li key={link.name} className="nav-item-link">
+                                <Link href={link.href}>
+                                    {link.name}
+                                </Link>
+                            </li>
+                        ))
                     }
-                </span>
-                <ul className="nav-wrapper">
-                        {
-                            navbarRoutes.map(link => (
-                                <li key={link.name} className="nav-item-link">
-                                    <Link href={link.href}>
-                                        {link.name}
-                                    </Link>
-                                </li>
-                            ))
-                        }
-                        <li className="nav-item-link">
-                            <ToggleThemeColorButton />
-                        </li>
+                    <li className="nav-item-link theme-toggle">
+                        <ToggleThemeColorButton />
+                    </li>
                 </ul>
             </nav>
         </header>

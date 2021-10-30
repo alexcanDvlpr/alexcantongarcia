@@ -116,15 +116,38 @@ p code {
   color: rgba(255, 255, 255, 0.92);
 }
 
+.aboutme__section .aboutme__content {
+  border-radius: 5px;
+  background: transparent;
+  padding: 20px 40px;
+  margin-top: 78px;
+  margin-bottom: 25px;
+}
+
+.aboutme__content > * {
+  line-height: 1.55rem !important;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-color: #00c896;
+}
+
 @media only screen and (max-width: 600px) {
   .last-articles-container,
   .last-articles-heading, 
   .last-articles-content {
     width: 100%;
-    padding: 0px 15px;
   }
   .last-articles-content {
     width: 100%;
-    padding: 0px 15px;
+  }
+  .aboutme__grid {
+    margin: 25px 0 0 0;
+    grid-gap: 0 !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .aboutme__section .aboutme__content {
+    padding: 20px 10px;
   }
 }

@@ -1,3 +1,4 @@
+import AlexCantonHead from '../../components/AlexCantonHead'
 import MDXComponents from '../../components/MDXComponents'
 import PostHead from '../../components/PostHead/PostHead'
 import { getFileBySlug, getFiles } from '../../lib/mdx'
@@ -7,17 +8,21 @@ import { Container } from '@chakra-ui/react'
 import { MDXRemote } from 'next-mdx-remote'
 
 const Post = ({ source, frontmatter }) => {
+  const headTitle = `${frontmatter.title} | Alex Cantón`
   return (
-    <div className="main">
-      <Header showTitle={true} />
-      <Container as="section" maxW="container.lg" style={{ marginTop: '78px' }}>
-        <PostHead metadata={{ ...frontmatter }} />
-        <Container as="article" maxW={['container.xl', 'container.xl', '740px']} className="article-content" my={8}>
-          <MDXRemote {...source} components={MDXComponents} />
+    <>
+      <AlexCantonHead index="true" title={headTitle} />
+      <div className="main">
+        <Header showTitle={true} />
+        <Container as="section" maxW="container.lg" style={{ marginTop: '78px' }}>
+          <PostHead metadata={{ ...frontmatter }} />
+          <Container as="article" maxW={['container.xl', 'container.xl', '740px']} className="article-content" my={8}>
+            <MDXRemote {...source} components={MDXComponents} />
+          </Container>
         </Container>
-      </Container>
-      <Footer />
-    </div >
+        <Footer />
+      </div >
+    </>
   )
 }
 

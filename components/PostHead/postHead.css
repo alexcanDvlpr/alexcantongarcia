@@ -24,6 +24,10 @@
     justify-content: flex-end;
 }
 
+hr.singleArticleSeparator {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     .postHeader {
         margin: 116px 0px 40px 0px;
@@ -45,5 +49,11 @@
     .readingTime,
     .publishOn {
         margin: 2px 0px;
+    }
+    hr.singleArticleSeparator {
+        height: 4px;
+        border: 0;
+        border-top: 4px solid var(--green-primary);
+        margin: 15px 0px;
     }
 }

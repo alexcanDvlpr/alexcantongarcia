@@ -1,5 +1,6 @@
 import { Avatar, Heading, Text, Wrap, Box, Tag } from '@chakra-ui/react'
 import { formatDate } from '../../lib/date'
+import TAGS from '../../data/tags'
 import Link from 'next/link'
 
 const PostCard = ({ post }) => {
@@ -15,7 +16,7 @@ const PostCard = ({ post }) => {
                         <Text as="p" size="sm">{author} - {formatDate(date)}</Text>
                         {
                             tags.map(tag => (
-                                <Tag mr={2} key={tag} colorScheme="red">{tag}</Tag>
+                                <Tag mr={2} key={tag} style={ { backgroundColor: TAGS[tag], color: '#fff', opacity: '.7' } }>{tag}</Tag>
                             ))
                         }
                     </Wrap>
