@@ -1,5 +1,6 @@
 import { Box, Text, Avatar, Tag, Heading } from '@chakra-ui/react'
 import { formatDate } from '../../lib/date'
+import TAGS from '../../data/tags'
 
 const PostHead = ({ metadata }) => {
   const { author = '', avatar = '', date = '', readingTime, tags, title = '' } = metadata
@@ -29,7 +30,7 @@ const PostHead = ({ metadata }) => {
             <Box mt={3}>
                 {
                     tags.map(tag => (
-                        <Tag mr={2} key={tag} colorScheme="red">{tag}</Tag>
+                        <Tag mr={2} key={tag} style={ { backgroundColor: TAGS[tag], color: '#fff', opacity: '.7' } }>{tag}</Tag>
                     ))
                 }
             </Box>

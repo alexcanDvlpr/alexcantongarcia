@@ -11,7 +11,7 @@ const Blog = ({ posts }) => {
             <Container maxW="container.lg" className="blog-container">
                 <Center className="last-articles-container">
                     <Box className="last-articles-heading">
-                        <Heading as="h2" size="xl">Últimos Artículos</Heading>
+                        <Heading className="underline" as="h2" size="xl">Últimos Artículos</Heading>
                     </Box>
                     <Box className="last-articles-content">
                         {
