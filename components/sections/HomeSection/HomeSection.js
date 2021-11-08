@@ -5,7 +5,7 @@ const HomeSection = () => {
   return (
         <section className="homeSectionContent">
             <div className="homeImageContent">
-                <img src="/avatar/alex.jpg" alt="123" />
+                <img src="/avatar/alex.webp" alt="123" />
             </div>
             <Container maxW="container.sm" className="homeTitleContent">
                 <Heading className="homeTitle" as="h1" size="3xl">Hola,</Heading>
