@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://alexcantongarcia.vercel.app',
+  siteUrl: process.env.SITE_URL || 'https://alexcantongarcia.es',
   generateRobotsTxt: true
 }
