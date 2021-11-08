@@ -6,7 +6,7 @@ const CompanySection = () => {
             <Heading as="h2" size="xl" mt={8} color="gray.700">He trabajado en:</Heading>
             <div className="sliderCompanies">
                 <Link href="https://es.worldline.com/es/home.html" target="_blank" rel="noreferrer" className="companyLogo">
-                    <Image boxSize="250px" src="/images/companySection/worldline.png" alt="Worldline Iberia" />
+                    <Image boxSize="250px" src="/images/companySection/worldline.webp" alt="Worldline Iberia" />
                 </Link>
                 <Link href="https://www.gmv.com/es/" target="_blank" rel="noreferrer" className="companyLogo">
                     <Image boxSize="250px" src="/images/companySection/logo_gmv.svg" alt="GMV Innovating Solutions" />
