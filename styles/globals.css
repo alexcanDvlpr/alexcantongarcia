@@ -116,7 +116,8 @@ p code {
   color: rgba(255, 255, 255, 0.92);
 }
 
-.aboutme__section .aboutme__content {
+.aboutme__section .aboutme__content,
+.affiliates__section .affiliates__content {
   border-radius: 5px;
   background: transparent;
   padding: 20px 40px;
@@ -149,5 +150,8 @@ p code {
   }
   .aboutme__section .aboutme__content {
     padding: 20px 10px;
+  }
+  .affiliates__section .affiliates__content {
+    padding: 35px 10px;
   }
 }
