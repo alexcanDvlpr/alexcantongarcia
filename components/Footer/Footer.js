@@ -8,6 +8,11 @@ const Footer = () => {
     { link: 'https://www.instagram.com/alexcan.dvlpr/?hl=es', name: 'Instagram' }
   ]
 
+  const privacy = [
+    { link: '/politicas-de-cookies', name: 'Políticas de Cookies' },
+    { link: '/politicas-de-privacidad', name: 'Políticas de Privacidad' }
+  ]
+
   return (
         <footer className="footer">
             <Container maxW="container.lg">
@@ -22,7 +27,18 @@ const Footer = () => {
                         }
                     </Grid>
                 </Center>
-                <Center mt={7}>
+                <Center mt={5}>
+                    <Grid className="politicas_box" templateColumns="repeat(2, 1fr)" gap={[2, 8, 8]}>
+                        {
+                            privacy.map(link => (
+                                <Link href={link.link} key={link.name} target="_blank" rel="noreferrer">
+                                    <Text fontSize="lg">{link.name}</Text>
+                                </Link>
+                            ))
+                        }
+                    </Grid>
+                </Center>
+                <Center pt={5}>
                     <Grid>
                         <Text fontSize="lg">Creado con ❤️ por Alex Cantón</Text>
                     </Grid>
