@@ -6,10 +6,9 @@ const ToggleThemeColorButton = () => {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-
-            <Button aria-label="themeModeToggle" variant="link" onClick={toggleColorMode}>
-                {colorMode === 'light' ? <NightIcon /> : <SunIcon />}
-            </Button>
+    <Button aria-label="themeModeToggle" variant="link" onClick={toggleColorMode}>
+      {colorMode === 'light' ? <NightIcon /> : <SunIcon />}
+    </Button>
   )
 }
 
