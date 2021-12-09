@@ -1,0 +1,145 @@
+---
+title: '¿Cómo crear un servidor web en JavaScript con Express?'
+author: 'Alex Cantón'
+avatar: 'avatar/alex.webp'
+date: '2021-09-21'
+tags:
+    - 'JavaScript'
+    - 'Node.js'
+---
+
+Desde que se creó JavaScript, se le ha denominado el "Lenguaje de la Web", y esto junto con algunas librerías como JQuery, hizo que se le denominara como un lenguaje de front. Pero desde hace unos años hasta la actualidad, con la aparición de **Node.js** podemos programar con JavaScript en la parte del backend.
+
+Si es la primera vez que lees sobre **Node.js**, te estarás preguntando... ¿Qué es Node.js? Podrías llegar a pensar que es un nuevo lenguaje basado en JavaScript como puede llegar a ser de alguna manera **TypeScript**, pero no, es un entorno de desarrollo para JavaScript, basado en el motor V8 de Google, y fue creado por [Ryan Dahl](https://www.ecured.cu/Ryan_Lienhart_Dahl).
+
+En este blog, se verá Node desde el punto de vista del desarrollo web, pero vale para **desarrollo web**, **IoT**, **Bots**, **Inteligencia Artificial** y un largo etc.
+
+## ¿Cómo crear un servidor web?
+
+Para crear un servidor web, en este artículo voy a usar la libreria de **Express.js**, una librería orientada al backend muy minimalista pero a la vez potente.
+
+El primer paso sería crear nuestro proyecto de Node, creamos nuestro directorio **primer-proyecto** y ejecutamos:
+
+```shell
+# Accedemos al directorio
+cd primer-proyecto/
+# Creamos proyecto node
+npm init
+```
+La consola nos mostrará la primera versión de nuestro **package.json** desde el cual podremos trabajar.
+```shell
+Press ^C at any time to quit.
+package name: (primer-proyecto)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author: Alex Cantón
+license: (ISC)
+About to write to package.json:
+{
+  "name": "primer-proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Cantón",
+  "license": "ISC"
+}
+Is this OK? (yes)
+```
+
+Una vez creado nuestro proyecto, tendremos que instalar nuestra dependencia de Express, lo podemos hacer de esta manera:
+
+```shell
+npm install express -S -E
+```
+
+El flag `-S` es para que se añada en la sección de **dependencies** en el `package.json` y el `-E` para instalar la versión exacta. Quedaría de esta manera:
+
+```json
+"dependencies": {
+    "express": "4.17.1"
+  },
+```
+
+Ahora que lo tenemos instalado, podemos empezar a desarrollar nuestro servidor, abriremos nuestro fichero de entrada, por defecto el **index.js** y escribiremos:
+
+```js
+// Imports
+const express = require('express')
+const app = express()
+// Puerto
+const PORT = 3000
+// Middlewares
+app.use(express.json())
+// Arrancar
+app.listen(PORT, () => {
+    console.log(`Server is running. http://localhost:${PORT}`)
+})
+```
+
+En los siguientes puntos voy a explicar los diferentes pasos que he seguido en el código anterior.
+
+#### 1. Imports
+
+En este paso se importan las librerías, en este caso, como la única que se ha instalado ha sido **express**, se importa y se almacena la librería en la variable, el siguiente paso es crear una aplicación web con la función de **express()**.
+
+Esta aplicación, será la que arranquemos para tener nuestro servidor levantado.
+
+#### 2. Puerto
+
+Este paso es opcional para este ejemplo, pero he apartado el puerto por que en un proyecto mediano/grande, puede ser que el puerto vaya parametrizado en función del entorno, la máquina etc... Entonces puede ser buena práctica tenerlo aparte como variable antes de aplicarlo a la función **.listen()**.
+
+#### 3. Middlewares
+
+Un Middleware, en términos generales, es un fragmento de código, que se ejecuta antes de la petición principal. Por ejemplo se puede usar un middleware para la autentificación, es decir, crear un authMiddleware y que se ejecute antes de cada petición del servidor para poder garantizar que el servidor solo es accesible a los usuarios ya registrados.
+
+Este Middleware en particular sirve para que tanto las peticiones como las respuestas, entiendan y puedan recibir y enviar JSON´s para las comunicaciones.
+
+#### 4. Arrancar
+
+En este paso, se ejecuta el método **.listen()** de la aplicación de Express, que recibe como parámetro el puerto en el que se va a desplegar nuestra aplicación, el segundo parámetro es una función de callback que se ejecutará en el caso de que la aplicación arranque correctamente.
+
+#### Ejecución
+
+Ahora que ya tenemos el fichero **index.js** completo, tendremos que comprobar que funciona, para ello iremos a nuestra consola de comandos y ejecutaremos:
+
+```shell
+node index.js
+```
+
+Si todo funciona correctamente debería de mostrar el siguiente mensaje en consola:
+
+```shell
+Server is running. http://localhost:3000
+```
+
+Pero con esto simplemente conseguiremos arrancar un servidor en el puerto 3000, pero no podemos acceder a él. Si accedemos en un navegador a la ruta **http://localhost:3000** este nos mostrará el mensaje `Cannot Get /`, esto quiere decir que no puede acceder a la raíz, pero la buena noticia es que el servidor funciona.
+
+Explicado esto, vamos a crear una ruta (o endpoint) para poder acceder a la raiz.
+
+#### Controlador
+
+En nuestro archivo de entrada, antes del paso de **Inicialización**, tendremos que añadir el siguiente código:
+
+```js
+app.get('/', (req, res) => {
+    return res.status(200).send({ message: 'Mensaje de respuesta' })
+})
+```
+
+Con este código nuestro servidor ya tendrá un punto de entrada en la raíz, mediante el método GET de HTTP, el cual nos devolverá una respuesta, con un estado 200 (en este caso) y un body en formato JSON con el siguiente formato:
+
+```json
+{
+    "message": "Mensaje de respuesta"
+}
+```
+### Conclusión
+
+En este artículo hemos visto cómo podemos crear un servidor web con **JavaScript** y su framework backend más conocido, usado, minimalista y potente del mercado, **Express.js** y con unas pocas líneas hemos podido desplegar en el puerto 3000 un servicio que tiene un punto de entrada en la raíz del proyecto, en lo que sería nuestro **http://localhost:3000/**
