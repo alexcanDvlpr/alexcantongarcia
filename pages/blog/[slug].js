@@ -11,7 +11,7 @@ const Post = ({ source, frontmatter }) => {
   const headTitle = `${frontmatter.title} | Alex Cantón`
   return (
     <>
-      <AlexCantonHead index="true" title={headTitle} />
+      <AlexCantonHead index="true" title={headTitle} description={frontmatter.seo_description} />
       <div className="main">
         <Header showTitle={true} />
         <Container as="section" maxW="container.lg" style={{ marginTop: '78px' }}>
