@@ -2,7 +2,6 @@ import AlexCantonHead from '../components/AlexCantonHead'
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import { Container, Heading, Text, SimpleGrid, Box } from '@chakra-ui/react'
-import GithubLink from '../components/GithubLink/GithubLink'
 
 const AffiliatePage = () => {
   const products = [
@@ -24,14 +23,6 @@ const AffiliatePage = () => {
                 <Header showTitle={true} />
                 <Container className="affiliates__section" as="section" maxW="container.lg" >
                     <div className="affiliates__content">
-                        <GithubLink />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
                         <Heading size="xl">Bienvenidos a la página de Afiliación</Heading>
                         <Text mt={2} fontSize="lg">
                             En esta sección, tendremos los distintos productos de Amazon que he comprado y os recomiendo a todos vosotros.
