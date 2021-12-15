@@ -7,9 +7,10 @@ import Footer from '../components/Footer/Footer'
 import React from 'react'
 
 export default function Home () {
+  const metadata = { index: true, title: '¡Hola! Soy Alex Cantón' }
   return (
     <>
-      <AlexCantonHead index="true" title="¡Hola! Soy Alex Cantón" />
+      <AlexCantonHead metadata={ metadata } />
       <div className="main">
         <Header />
         <div className="main-wrapper">

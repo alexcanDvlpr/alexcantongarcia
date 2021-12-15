@@ -6,27 +6,28 @@ import { getAllFilesMetadata } from '../../lib/mdx'
 import { orderByDates } from '../../lib/date'
 
 const Blog = ({ posts }) => {
+  const metadata = { index: true, title: 'Blog | Alex Cantón', slug: 'blog', description: 'Blog de Alex Cantón García, en el que se hablará de tecnología, tutoriales de desarrollo web, desarrollo personal y las últimas tendencias y novedades del mercado del Software para tener informados a todo aquel que este iniciandose en este mundo como hobbie o para su carrera laboral.' }
   return (
     <>
-      <AlexCantonHead index="true" title="Blog | Alex Cantón" />
-        <div className="main">
-            <Header showTitle={true} />
-            <Container maxW="container.lg" className="blog-container">
-                <Center className="last-articles-container">
-                    <Box className="last-articles-heading">
-                        <Heading className="underline" as="h2" size="xl">Últimos Artículos</Heading>
-                    </Box>
-                    <Box className="last-articles-content">
-                        {
-                            posts.map(post => (
-                                <PostCard key={post.slug} post={post} />
-                            ))
-                        }
-                    </Box>
-                </Center>
-            </Container>
-        </div>
-        </>
+      <AlexCantonHead metadata={metadata} />
+      <div className="main">
+        <Header showTitle={true} />
+        <Container maxW="container.lg" className="blog-container">
+          <Center className="last-articles-container">
+            <Box className="last-articles-heading">
+              <Heading className="underline" as="h2" size="xl">Últimos Artículos</Heading>
+            </Box>
+            <Box className="last-articles-content">
+              {
+                posts.map(post => (
+                  <PostCard key={post.slug} post={post} />
+                ))
+              }
+            </Box>
+          </Center>
+        </Container>
+      </div>
+    </>
   )
 }
 
