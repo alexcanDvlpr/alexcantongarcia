@@ -6,9 +6,10 @@ import { getAllFilesMetadata } from '../../lib/mdx'
 import { orderByDates } from '../../lib/date'
 
 const Blog = ({ posts }) => {
+  const metadata = { index: true, title: 'Blog | Alex Cantón', slug: 'blog', description: 'Blog de Alex Cantón García, en el que se hablará de tecnología, tutoriales de desarrollo web, desarrollo personal y las últimas tendencias y novedades del mercado del Software para tener informados a todo aquel que este iniciandose en este mundo como hobbie o para su carrera laboral.' }
   return (
     <>
-      <AlexCantonHead index="true" title="Blog | Alex Cantón" />
+      <AlexCantonHead metadata={metadata} />
       <div className="main">
         <Header showTitle={true} />
         <Container maxW="container.lg" className="blog-container">

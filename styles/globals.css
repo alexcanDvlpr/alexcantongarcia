@@ -14,6 +14,7 @@
 
 /*  SECTIONS  */
 @import url('../components/sections/CompanySection/companySection.css');
+@import url('../components/sections/CVSection/cvSection.css');
 @import url('../components/sections/HomeSection/homeSection.css');
 
 /* GLOBAL STYLES */
