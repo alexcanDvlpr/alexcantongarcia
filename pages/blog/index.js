@@ -9,24 +9,24 @@ const Blog = ({ posts }) => {
   return (
     <>
       <AlexCantonHead index="true" title="Blog | Alex Cantón" />
-        <div className="main">
-            <Header showTitle={true} />
-            <Container maxW="container.lg" className="blog-container">
-                <Center className="last-articles-container">
-                    <Box className="last-articles-heading">
-                        <Heading className="underline" as="h2" size="xl">Últimos Artículos</Heading>
-                    </Box>
-                    <Box className="last-articles-content">
-                        {
-                            posts.map(post => (
-                                <PostCard key={post.slug} post={post} />
-                            ))
-                        }
-                    </Box>
-                </Center>
-            </Container>
-        </div>
-        </>
+      <div className="main">
+        <Header showTitle={true} />
+        <Container maxW="container.lg" className="blog-container">
+          <Center className="last-articles-container">
+            <Box className="last-articles-heading">
+              <Heading className="underline" as="h2" size="xl">Últimos Artículos</Heading>
+            </Box>
+            <Box className="last-articles-content">
+              {
+                posts.map(post => (
+                  <PostCard key={post.slug} post={post} />
+                ))
+              }
+            </Box>
+          </Center>
+        </Container>
+      </div>
+    </>
   )
 }
 
