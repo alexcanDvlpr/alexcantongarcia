@@ -20,9 +20,12 @@
 
 .homeImageContent img {
     width: 50%;
-    height: auto;
+    height: 100%;
     border-radius: 100%;
     object-position: right;
+    -o-object-position: right;
+    -webkit-object-position: right;
+    -moz-object-position: right;
 }
 
 .homeTitleContent {
