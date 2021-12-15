@@ -17,7 +17,7 @@ const Custom404Page = () => {
               <Heading as="h2" size="lg">Ir al Blog</Heading>
             </Link>
           </Box>
-          <Image className="image404" src="/images/pages/404/404.webp" alt="404" />
+          <Image className="image404" src="https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639607618/Blog/404_yqm9dc.webp" alt="404" />
         </Container>
       </div >
       <Footer />
