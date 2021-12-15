@@ -5,7 +5,7 @@ const HomeSection = () => {
   return (
         <section className="homeSectionContent">
             <div className="homeImageContent">
-                <img src="/avatar/alex.webp" alt="123" />
+                <img src="https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639592290/Blog/alex_r0u07u.webp" alt="123" />
             </div>
             <Container maxW="container.sm" className="homeTitleContent">
                 <Heading className="homeTitle" as="h1" size="3xl">Hola,</Heading>
