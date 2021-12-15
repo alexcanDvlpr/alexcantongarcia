@@ -1,6 +1,7 @@
 import CompanySection from '../components/sections/CompanySection/CompanySection'
 import AboutSection from '../components/sections/AboutSection/AboutSection'
 import HomeSection from '../components/sections/HomeSection/HomeSection'
+import CVSection from '../components/sections/CVSection/CVSection'
 import AlexCantonHead from '../components/AlexCantonHead'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
@@ -17,6 +18,7 @@ export default function Home () {
             <HomeSection />
             <CompanySection />
             <AboutSection />
+            <CVSection />
             <Footer />
           </div>
         </div>
