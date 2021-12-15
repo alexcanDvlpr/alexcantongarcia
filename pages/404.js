@@ -4,9 +4,10 @@ import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 
 const Custom404Page = () => {
+  const metadata = { title: 'Ups... | Alex Cantón', index: false }
   return (
     <>
-      <AlexCantonHead title="Ups... | Alex Cantón" />
+      <AlexCantonHead metadata={ metadata } />
       <div className="main">
         <Header showTitle={true} />
         <Container className="error404" as="section" maxW="container.lg" >

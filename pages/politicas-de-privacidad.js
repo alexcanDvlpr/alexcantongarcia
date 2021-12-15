@@ -7,9 +7,11 @@ import { MDXRemote } from 'next-mdx-remote'
 import { getFileBySlug } from '../lib/mdx'
 
 const PoliticasDePrivacidad = ({ source }) => {
+  const metadata = { title: 'Políticas de Cookies y Privacidad | Alex Cantón', index: false, description: 'Políticas de Cookies y Privacidad de alexcantongarcia.es', slug: 'politicas-de-privacidad' }
+
   return (
     <>
-            <AlexCantonHead title="Políticas de Cookies y Privacidad | Alex Cantón" />
+            <AlexCantonHead metadata={metadata} />
             <div className="main">
                 <Header showTitle={true} />
                 <Container className="affiliates__section" as="section" maxW="container.lg" >
