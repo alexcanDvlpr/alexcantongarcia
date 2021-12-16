@@ -10,9 +10,11 @@
 @import url('../components/PostHead/postHead.css');
 @import url('../components/Blockquote/blockquote.css');
 @import url('../components/YouTubeVideo/youtubeVideo.css');
+@import url('../components/GithubLink/githublink.css');
 
 /*  SECTIONS  */
 @import url('../components/sections/CompanySection/companySection.css');
+@import url('../components/sections/CVSection/cvSection.css');
 @import url('../components/sections/HomeSection/homeSection.css');
 
 /* GLOBAL STYLES */

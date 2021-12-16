@@ -8,10 +8,9 @@ import { Container } from '@chakra-ui/react'
 import { MDXRemote } from 'next-mdx-remote'
 
 const Post = ({ source, frontmatter }) => {
-  const headTitle = `${frontmatter.title} | Alex Cantón`
   return (
     <>
-      <AlexCantonHead index="true" title={headTitle} description={frontmatter.seo_description} />
+      <AlexCantonHead metadata={{ ...frontmatter, slug: `blog/${frontmatter.slug}`, index: true }} />
       <div className="main">
         <Header showTitle={true} />
         <Container as="section" maxW="container.lg" style={{ marginTop: '78px' }}>
