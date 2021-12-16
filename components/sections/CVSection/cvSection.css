@@ -15,5 +15,10 @@
 }
 
 @media only screen and (max-width: 600px) {
-
+    .cvSection {
+        padding: 45px 10px
+    }
+    .cvSection h2 {
+        text-align: center;
+    }
 }

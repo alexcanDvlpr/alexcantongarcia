@@ -14,11 +14,13 @@ const PostCard = ({ post }) => {
                     <Wrap className="post-metadata" mt={3}>
                         <Avatar size="sm" name="Alex Cantón" src="https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639592290/Blog/alex_r0u07u.webp" />
                         <Text as="p" size="sm">{author} - {formatDate(date)}</Text>
-                        {
-                            tags.map(tag => (
-                                <Tag mr={2} key={tag} style={ { backgroundColor: TAGS[tag], color: '#fff', opacity: '.7' } }>{tag}</Tag>
-                            ))
-                        }
+                        <Box>
+                            {
+                                tags.map(tag => (
+                                    <Tag mr={2} key={tag} style={{ backgroundColor: TAGS[tag], color: '#fff', opacity: '.7' }}>{tag}</Tag>
+                                ))
+                            }
+                        </Box>
                     </Wrap>
                 </a>
             </Link>
