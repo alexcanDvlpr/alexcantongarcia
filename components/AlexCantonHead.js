@@ -31,6 +31,7 @@ const AlexCantonHead = ({ metadata = { } }) => {
       <meta key="twitter:description" name="twitter:description" content={SEO.description} />
       <meta key="twitter:image" name="twitter:image" content={SEO.image} />
       <meta key="published" property="article:published_time" content={SEO.date} />
+
     </Head>
   )
 }
