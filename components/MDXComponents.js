@@ -2,6 +2,7 @@
 import YoutubeVideo from './YouTubeVideo/YouTubeVideo'
 import CustomImage from './CustomImage/CustomImage'
 import Blockquote from './Blockquote/Blockquote'
+import GithubLink from './GithubLink/GithubLink'
 import { Heading, Text } from '@chakra-ui/react'
 import Separator from './Separator/Separator'
 
@@ -18,5 +19,6 @@ export default {
   img: (props) => <CustomImage {...props} />,
   Separator,
   YoutubeVideo,
-  Blockquote
+  Blockquote,
+  GithubLink
 }

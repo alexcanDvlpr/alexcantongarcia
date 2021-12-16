@@ -6,7 +6,7 @@ const AlexCantonHead = ({ metadata = { } }) => {
     description:
       metadata.description || 'Mi nombre es Alex Cantón y soy desarrollador web desde el 2017 en Madrid, España. Esta es mi web junto con mi blog en la que quiero compartir conocimiento, enseñar nuevas tecnologías y enseñar JavaScript desde 0 para gente que este estudiando o se este abriendo camino en el mundo laboral.',
     slug: metadata.slug || '',
-    image: 'https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639592290/Blog/alex_r0u07u.webp',
+    image: 'https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639688292/Blog/Alexcan.Dvlpr_smb0wg.webp',
     date: metadata.date || new Date().toISOString(),
     indexed: (metadata.index) ? 'index,follow' : 'noindex,nofollow'
   }
@@ -31,7 +31,6 @@ const AlexCantonHead = ({ metadata = { } }) => {
       <meta key="twitter:description" name="twitter:description" content={SEO.description} />
       <meta key="twitter:image" name="twitter:image" content={SEO.image} />
       <meta key="published" property="article:published_time" content={SEO.date} />
-
     </Head>
   )
 }
