@@ -6,7 +6,7 @@ date: '2021-09-21'
 description: 'Tutorial de Desarrollo Web desde 0 en el que creamos un servidor en Node.js (JavaScript) con el framework de Express.js, uno de los más conocidos y minimalistas del mercado. Con un 19.005.088 descargas de media en NPM (Node Package Manager)'
 tags:
     - 'JavaScript'
-    - 'Node.js'
+    - 'Nodejs'
 ---
 
 Desde que se creó JavaScript, se le ha denominado el "Lenguaje de la Web", y esto junto con algunas librerías como JQuery, hizo que se le denominara como un lenguaje de front. Pero desde hace unos años hasta la actualidad, con la aparición de **Node.js** podemos programar con JavaScript en la parte del backend.
@@ -19,15 +19,15 @@ En este blog, se verá Node desde el punto de vista del desarrollo web, pero val
 
 ### ¿Cómo crear un servidor web?
 
-Para crear un servidor web, en este artículo voy a usar la libreria de **[Express.js](https://expressjs.com/es/)**, una librería orientada al backend muy minimalista pero a la vez potente.
+Para crear un servidor web, en este artículo voy a usar la librería de **[Express.js](https://expressjs.com/es/)**, una librería orientada al backend muy minimalista pero a la vez potente.
 
 El primer paso sería crear nuestro proyecto de Node, creamos nuestro directorio **primer-proyecto** y ejecutamos:
 
 ```shell
 # Accedemos al directorio
-cd primer-proyecto/
+$ cd primer-proyecto/
 # Creamos proyecto node
-npm init
+$ npm init
 ```
 La consola nos mostrará la primera versión de nuestro **package.json** desde el cual podremos trabajar.
 ```shell
@@ -62,7 +62,7 @@ Is this OK? (yes)
 Una vez creado nuestro proyecto, tendremos que instalar nuestra dependencia de Express, lo podemos hacer de esta manera:
 
 ```shell
-npm install express -S -E
+$ npm install express -S -E
 ```
 
 El flag `-S` es para que se añada en la sección de **dependencies** en el `package.json` y el `-E` para instalar la versión exacta. Si comprobamos el **package.json**, quedaría de esta manera:
@@ -130,16 +130,16 @@ Esta ejecución servirá para levantar nuestro <u>servidor backend en Node.js</u
 Ahora que ya tenemos el fichero **index.js** completo, tendremos que comprobar que funciona, para ello iremos a nuestra consola de comandos y ejecutaremos:
 
 ```shell
-node index.js
+$ node index.js
 ```
 
-Si todo funciona correctamente debería de mostrar el siguiente mensaje en consola:
+Si todo funciona correctamente debería de mostrar el siguiente mensaje en la consola:
 
 ```shell
 Server is running. http://localhost:3000
 ```
 
-Pero con esto simplemente conseguiremos arrancar un servidor en el puerto 3000, pero no podemos acceder a él. Si accedemos en un navegador a la ruta **http://localhost:3000** este nos mostrará el mensaje `Cannot Get /`, esto quiere decir que no puede acceder a la raíz, pero la buena noticia es que el servidor funciona.
+Pero con esto simplemente conseguiremos arrancar un servidor en el puerto 3000, pero no podemos acceder a él. Si accedemos en un navegador a la ruta **http://localhost:3000** esté nos mostrará el mensaje `Cannot Get /`, esto quiere decir que no puede acceder a la raíz, pero la buena noticia es que el servidor funciona.
 
 Explicado esto, vamos a crear una ruta de acceso (o **endpoint**) para poder acceder a la raíz.
 

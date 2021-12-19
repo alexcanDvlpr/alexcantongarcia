@@ -30,7 +30,7 @@ const PostHead = ({ metadata }) => {
             <Box mt={3}>
                 {
                     tags.map(tag => (
-                        <Tag mr={2} key={tag} style={ { backgroundColor: TAGS[tag], color: '#fff', opacity: '.7' } }>{tag}</Tag>
+                        <Tag mr={2} key={tag} style={ { backgroundColor: TAGS[tag], color: '#fff' } }>{tag}</Tag>
                     ))
                 }
             </Box>
