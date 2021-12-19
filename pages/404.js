@@ -4,9 +4,10 @@ import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 
 const Custom404Page = () => {
+  const metadata = { title: 'Ups... | Alex Cantón', index: false }
   return (
     <>
-      <AlexCantonHead title="Ups... | Alex Cantón" />
+      <AlexCantonHead metadata={ metadata } />
       <div className="main">
         <Header showTitle={true} />
         <Container className="error404" as="section" maxW="container.lg" >
@@ -17,7 +18,7 @@ const Custom404Page = () => {
               <Heading as="h2" size="lg">Ir al Blog</Heading>
             </Link>
           </Box>
-          <Image className="image404" src="/images/pages/404/404.webp" alt="404" />
+          <Image className="image404" src="https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639607618/Blog/404_yqm9dc.webp" alt="404" />
         </Container>
       </div >
       <Footer />

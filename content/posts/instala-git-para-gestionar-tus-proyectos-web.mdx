@@ -1,0 +1,88 @@
+---
+title: 'Instala GIT para gestionar tus proyectos web'
+author: 'Alex Cantón'
+avatar: 'https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639592290/Blog/alex_r0u07u.webp'
+date: '2021-12-14'
+description: 'Instalación desde 0 de Git en Windows o en Mac OS. Instalación del sistema del Control de Versiones más usado en la actualidad para todo tipo de proyectos. Git, inventado por Linus Torvals es una de las herramientas indispensables actualmente en el año 2022.'
+tags:
+    - 'Git'
+---
+
+Actualmente cuando hablamos de un proyecto de desarrollo web, ya sea profesional o el proyecto del profesor de universidad, nos gustaría que ese proyecto no se perdiera o borrara, que si alguien la ha cagado o hay algún fallo, saber cuándo fue y a qué afecta para poder eliminarlo rápidamente o simplemente quieres de una forma facil extraer un `.zip` para entregar el proyecto entero e infinidad de cosas que se nos puedan ocurrir, ¿verdad?
+
+En resumen, sería increible que existiera una herramienta de almacenamiento y gestión de código descentralizado en el que pudieran participar desde 1 a X personas.
+
+Este tipo de herramienta del que hablo es un **Control de Versiones** y a día de hoy y por lo que estás en este artículo es porque quieres aprender a usar [GIT](https://git-scm.com/)
+
+## ¿Qué es Git?
+
+Como he mencionado anteriormente, **Git** es a día de hoy, el sistema de **control de versiones más conocido** y usado del mundo, creado por **[Linus Torvals](https://www.ecured.cu/Linus_Torvalds)**, desarrollador del Kernel de Linux. Su principal característica es que es **distribuido**, esto quiere decir que múltiples personas pueden trabajar en equipos sobre un mismo proyecto.
+
+En este post, vamos a ver las distintas formas de instalarlo en función del Sistema Operativo (SO) que utilicemos.
+
+![Linus Torvals, creador del sistema GIT](https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639608819/Blog/Posts/empezar-git-en-2022/linus_w1dypy.webp)
+
+## ¿Cómo lo instalamos?
+
+Para la instalación tanto en **Windows** como en **Mac OS**, podemos ir a la [Página Oficial de Git](https://git-scm.com/) y descargar el ejecutable directamente que nos presentan en su página de inicio:
+
+![Página principal de Git con el enlace para la descarga directa.](https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639841263/Blog/Posts/DescargarGit/descargithome_gt34aw.webp)
+
+Sin embargo, os dejo la instalación de Git para los dos sistemas que voy a contemplar en el post, **Windows** y **Mac OS**.
+
+### Windows
+Lo primero para instalar Git en nuestro sistema Windows será ir a la [página de GIT de descarga para Windows ](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git#:~:text=Instalaci%C3%B3n%20en%20Windows) y seguir los pasos que nos indican. Básicamente hay que descargarse el `.exe` de Git y ejecutarlo.
+Nos dan dos opciones, la opción de **Git for Windows Setup** (instalación completa en equipo) y la opción **Git for Windows Portable ("thumbdrive edition")** (opción portable).
+
+Mi recomendación es la instalación completa en tu equipo.
+
+![Página de Descarga de Git. Seleccionaremos la opción Git for Windows Setup de 64 bits (depende del equipo)](https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639829784/Blog/Posts/DescargarGit/git_download_ndkrnj.webp)
+
+Nos saldrá la típica pantalla de instalación, le damos a **Siguiente -> Siguiente -> Siguiente** y finalizamos la instalación.
+
+Una vez hayas dado a finalizar ya habremos terminado la instalación en Windows.
+
+### Mac OS
+Para los sistemas Mac OS, podemos tener dos opciones de instalación para el sistema de control de versiones Git.
+
+Se puede instalar a traves de la web de git, como en el caso anterior con Windows o con Homebrew.
+
+#### · Web de Git
+En este caso lo que haremos será ir a la Web de Git, al [apartado de instalación para Mac OS](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git#:~:text=com/download/linux.-,Instalaci%C3%B3n%20en%20Mac,-Hay%20varias%20maneras) y seguir los pasos que nos indica Git. Uno de ellos es usar Homebrew.
+
+#### · Homebrew
+Para descargar GIT con **Homebrew** tendremos que tener instalado Homebrew.
+
+Homebrew es un **Gestor de Paquetes** para Mac, desde el que podremos instalar innumerables programas y funcionalidades como en este caso puede ser git. Para instalar Homebrew tendremos que ejecutar en nuestra terminal el siguiente comando:
+```shell
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Una vez ejecutado el comando, introducimos nuestra contraseña de administrador, esperamos unos minutos a que el instalador haga su magia y una vez la consola termine ejecutamos:
+
+```shell
+$ brew -v
+```
+
+Y si muestra la versión, ¡quiere decir que tenemos Homebrew instalado!
+
+Ahora que lo tenemos instalado, es hora de instalar GIT, con la misma consola que teníamos abierta. Ejecutamos lo siguiente:
+
+```shell
+$ brew install git
+```
+
+Y de la misma forma que cuando hemos instalado Homebrew, cuando termine la consola ya tendremos instalado GIT en nuestro sistema Mac OS. 
+
+### Conclusión
+
+Una vez instalado ya podremos llevar a cabo la gestión de nuestros proyectos web, móviles o cualquier tipo de software de una manera organizada, clara y distribuida.
+
+Tengamos el SO que tengamos y hayamos elegido la instalación que queramos ya podremos comprobar que la instalación se ha llevado a cabo ejecutando el siguiente comando en la terminal.
+
+```shell
+# Comando Git para ver la versión actual.
+$ git --version
+```
+Con este comando veremos la versión actual de Git en nuestro sistema, lo que claro está, quiere decir que ya lo tenemos instalado.
+
+Si quieres saber más sobre **Git** y cómo usarlo para sacarle el máximo provecho en tus proyectos, tengo un post de iniciación llamado **[¿Cómo aprender Git y GitHub en 2022?](https://www.alexcantongarcia.es/blog/como-aprender-git-y-github-en-2022)**
