@@ -8,7 +8,7 @@ const CustomImage = (props) => {
       <Box>
         <Image {...props} rounded="md" />
         <Center>
-          <Text fontSize="sm" color="#011627" className="customImage__alt">{props.alt}</Text>
+          <Text fontSize="sm" color="#011627" align={'center'} className="customImage__alt">{props.alt}</Text>
         </Center>
       </Box>
     </Center>

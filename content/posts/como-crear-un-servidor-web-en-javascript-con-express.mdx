@@ -2,11 +2,11 @@
 title: '¿Cómo crear un servidor web en JavaScript con Express?'
 author: 'Alex Cantón'
 avatar: 'https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639592290/Blog/alex_r0u07u.webp'
-date: '2021-09-21'
-description: 'Tutorial de Desarrollo Web desde 0 en el que creamos un servidor en Node.js (JavaScript) con el framework de Express.js, uno de los más conocidos y minimalistas del mercado. Con un 19.005.088 descargas de media en NPM (Node Package Manager)'
+date: '2021-12-16'
+description: 'Tutorial de Desarrollo Web desde 0 en el que creamos un servidor web en JavaScript (Node.js) con el framework de Express.js, uno de los más conocidos y minimalistas del mercado. Con un 19.005.088 descargas de media en NPM (Node Package Manager)'
 tags:
     - 'JavaScript'
-    - 'Node.js'
+    - 'Nodejs'
 ---
 
 Desde que se creó JavaScript, se le ha denominado el "Lenguaje de la Web", y esto junto con algunas librerías como JQuery, hizo que se le denominara como un lenguaje de front. Pero desde hace unos años hasta la actualidad, con la aparición de **Node.js** podemos programar con JavaScript en la parte del backend.
@@ -15,19 +15,19 @@ Si es la primera vez que lees sobre **Node.js**, te estarás preguntando... ¿Qu
 
 ![Ryan Dahl](https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639687783/Blog/Posts/server-node/04e9bf509eba71f9787154ed0ef3f569_ieet4d.jpg)
 
-En este blog, se verá Node desde el punto de vista del desarrollo web, pero vale para **desarrollo web**, **IoT**, **Bots**, **Inteligencia Artificial** y un largo etc.
+En este blog, se verá Node desde el punto de vista del desarrollo web, pero vale para **Desarrollo Web**, **IoT**, **Bots**, **Inteligencia Artificial** y un largo etc.
 
 ### ¿Cómo crear un servidor web?
 
-Para crear un servidor web, en este artículo voy a usar la libreria de **[Express.js](https://expressjs.com/es/)**, una librería orientada al backend muy minimalista pero a la vez potente.
+Para crear un servidor web, en este artículo voy a usar la librería de **[Express.js](https://expressjs.com/es/)**, una librería orientada al backend muy minimalista pero a la vez potente.
 
 El primer paso sería crear nuestro proyecto de Node, creamos nuestro directorio **primer-proyecto** y ejecutamos:
 
 ```shell
 # Accedemos al directorio
-cd primer-proyecto/
+$ cd primer-proyecto/
 # Creamos proyecto node
-npm init
+$ npm init
 ```
 La consola nos mostrará la primera versión de nuestro **package.json** desde el cual podremos trabajar.
 ```shell
@@ -62,7 +62,7 @@ Is this OK? (yes)
 Una vez creado nuestro proyecto, tendremos que instalar nuestra dependencia de Express, lo podemos hacer de esta manera:
 
 ```shell
-npm install express -S -E
+$ npm install express -S -E
 ```
 
 El flag `-S` es para que se añada en la sección de **dependencies** en el `package.json` y el `-E` para instalar la versión exacta. Si comprobamos el **package.json**, quedaría de esta manera:
@@ -111,11 +111,11 @@ Esta aplicación, será la que arranquemos para tener nuestro servidor levantado
 
 #### 2. Puerto
 
-Este paso es opcional para este ejemplo, pero he apartado el puerto por que en un proyecto mediano/grande, puede ser que el puerto vaya parametrizado dependiendo del entorno. Entonces puede ser buena práctica tenerlo aparte como variable antes de aplicarlo a la función **.listen()**.
+Este paso es opcional para este ejemplo, pero he apartado el puerto porque en un proyecto mediano/grande, puede ser que el puerto vaya parametrizado dependiendo del entorno. Entonces puede ser buena práctica tenerlo aparte como variable antes de aplicarlo a la función **.listen()**.
 
 #### 3. Middlewares
 
-Un Middleware, en términos generales, es un fragmento de código, que se ejecuta antes de la petición principal. Por ejemplo se puede usar un middleware para la autentificación, es decir, crear un <u>authMiddleware</u> y que se ejecute antes de cada petición del servidor para poder garantizar que el servidor solo es accesible a los usuarios ya registrados.
+Un Middleware, en términos generales, es un fragmento de código, que se ejecuta antes de la petición principal. Por ejemplo, se puede usar un middleware para la autentificación, es decir, crear un <u>authMiddleware</u> y que se ejecute antes de cada petición del servidor para poder garantizar que el servidor solo es accesible a los usuarios ya registrados.
 
 Este Middleware en particular transforma tanto la petición (**Request**) como la respuesta (**Response**) en un formato <u>**JSON**</u>, para mantener un estandar de comunicación con los clientes.
 
@@ -130,18 +130,18 @@ Esta ejecución servirá para levantar nuestro <u>servidor backend en Node.js</u
 Ahora que ya tenemos el fichero **index.js** completo, tendremos que comprobar que funciona, para ello iremos a nuestra consola de comandos y ejecutaremos:
 
 ```shell
-node index.js
+$ node index.js
 ```
 
-Si todo funciona correctamente debería de mostrar el siguiente mensaje en consola:
+Si todo funciona correctamente debería de mostrar el siguiente mensaje en la consola:
 
 ```shell
 Server is running. http://localhost:3000
 ```
 
-Pero con esto simplemente conseguiremos arrancar un servidor en el puerto 3000, pero no podemos acceder a él. Si accedemos en un navegador a la ruta **http://localhost:3000** este nos mostrará el mensaje `Cannot Get /`, esto quiere decir que no puede acceder a la raíz, pero la buena noticia es que el servidor funciona.
+Pero con esto simplemente conseguiremos arrancar un servidor en el puerto 3000, pero no podemos acceder a él. Si accedemos en un navegador a la ruta **http://localhost:3000** esté nos mostrará el mensaje `Cannot Get /`, esto quiere decir que no puede acceder a la raíz, pero la buena noticia es que el servidor funciona.
 
-Explicado esto, vamos a crear una ruta de acceso (o **endpoint**) para poder acceder a la raiz.
+Explicado esto, vamos a crear una ruta de acceso (o **endpoint**) para poder acceder a la raíz.
 
 #### Controlador
 

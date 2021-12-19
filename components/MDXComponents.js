@@ -1,9 +1,9 @@
 /* eslint-disable react/display-name */
+import { Heading, UnorderedList, OrderedList, ListItem, Text } from '@chakra-ui/react'
 import YoutubeVideo from './YouTubeVideo/YouTubeVideo'
 import CustomImage from './CustomImage/CustomImage'
 import Blockquote from './Blockquote/Blockquote'
 import GithubLink from './GithubLink/GithubLink'
-import { Heading, Text } from '@chakra-ui/react'
 import Separator from './Separator/Separator'
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -17,6 +17,13 @@ export default {
   p: (props) => <Text fontSize="lg" lineHeight={5} my={4} {...props} />,
   a: (props) => <a {...props} className="article-link" target="_blank" rel="noreferrer">{props.children}</a>,
   img: (props) => <CustomImage {...props} />,
+  ul: (props) => <UnorderedList {...props} />,
+  ol: (props) => <OrderedList {...props} />,
+  li: (props) => (
+    <ListItem>
+      {props.children}
+    </ListItem>
+  ),
   Separator,
   YoutubeVideo,
   Blockquote,

@@ -2,30 +2,21 @@
 title: '¿Cómo aprender Git y GitHub en 2022?'
 author: 'Alex Cantón'
 avatar: 'https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639592290/Blog/alex_r0u07u.webp'
-date: '2021-12-21'
-description: 'Da tus primeros pasos con Git, el Control de Versiones más usado de la actualidad. Empieza por los comandos más básicos para ir familiarizandote con el sistema creado por Linus Torvals para la gestión de proyectos a nivel de código.'
+date: '2021-12-20'
+description: 'Aprende los comandos más básicos de Git, el Control de Versiones más usado de la actualidad. Familiarizate con el sistema creado por Linus Torvals para la gestión de proyectos a nivel de código. Aprende a usar git clone, gi add, git remote, git push, git pull, git commit y git status.'
 tags:
     - 'Git'
     - 'GitHub'
 ---
 ![Git y Github](https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639608819/Blog/Posts/empezar-git-en-2022/git-github_vr0t6u.webp)
-Actualmente cuando hablamos de un proyecto de desarrollo web, ya sea profesional o el proyecto del profesor de universidad, nos gustaría que ese proyecto no se perdiera o borrara, que si alguien la ha cagado, y hay algún fallo, saber cuándo fue y a qué afecta para poder eliminarlo rápidamente o simplemente quieres de una forma facil extraer un `.zip` para entregar el proyecto entero e infinidad de cosas que se nos puedan ocurrir, ¿verdad?
 
-En resumen, sería increible que existiera una herramienta de almacenamiento y gestión de código descentralizado en el que pudieran participar desde 1 a X personas.
+En este artículo vamos a ver qué es **GitHub** y como aplicar los comandos de Git más básicos para poder ir aplicándolo a nuestros proyectos web. En este mismo blog tengo un post sobre [Instalar GIT para gestionar tus proyectos web](https://www.alexcantongarcia.es/blog/instala-git-para-gestionar-tus-proyectos-web).
 
-Este tipo de herramienta del que hablo es un **Control de Versiones** y a día de hoy y por lo que estas en este artículo es porque quieres aprender a usar [GIT](https://git-scm.com/)
-
-## ¿Qué es Git?
-
-Como he mencionado anteriormente, **Git** es a día de hoy, el sistema de <u>control de versiones más conocido</u> y usado del mundo, creado por **[Linus Torvals](https://www.ecured.cu/Linus_Torvalds)**, desarrollador del Kernel de Linux. Su principal característica es que es **distribuido**, esto quiere decir que múltiples personas pueden trabajar en equipos sobre un mismo proyecto.
-
-En este post, te voy a dejar algunos de los comandos más básicos y que necesitas saber para empezar a trabajar con Git.
-
-![Linus Torvals, creador del sistema GIT](https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639608819/Blog/Posts/empezar-git-en-2022/linus_w1dypy.webp)
+Si no tienes Git instalado te invito a echarle un vistazo antes que a este, sino... ¡Vamos a darle caña!
 
 ## ¿Qué es GitHub?
 
-GitHub es un servicio web, que nos permite a los desarrolladores almacenar nuestro código en la nube, y poder acceder a él a través de una plataforma web. Tambien nos permite tener creado un perfil para gestionar nuestros proyectos o repositorios y usarlo así a modo de red social.
+GitHub es un servicio web, que nos permite a los desarrolladores almacenar nuestro código en la nube, y poder acceder a él a través de una plataforma web. También nos permite tener creado un perfil para gestionar nuestros proyectos o repositorios y usarlo así a modo de red social.
 
 Es propiedad de **Microsoft** y nos permite tener repositorios públicos o privados. Por cada repositorio nos permite tener una sección de **issues**, **integración contínua** y **entrega contínua**, lo que se denomina **CI/CD**.
 
@@ -33,7 +24,7 @@ Puedes visitar GitHub aquí: [https://github.com/](https://github.com/)
 
 ## ¿Cómo empezar?
 
-Lo primero para empezar con **Git** lo que necesitaremos será un repositorio en Github (u otro proveedor) y bajarnos (clonarnos) su contenido, aunque sea vacio, para poder trabajar desde la base del repositorio remoto de Github.
+Lo primero para empezar con **Git** será tener un repositorio en Github (u otro proveedor) y bajarnos (clonarnos) su contenido, aunque sea vacio, para poder trabajar desde la base del repositorio remoto de Github.
 
 Vamos con la chicha y a por la gran pregunta... **¿Cómo nos clonamos un repositorio de Github?**
 
@@ -46,13 +37,13 @@ Con este comando nos descargaremos un proyecto que se encuentre en Github u otro
 En este caso, copiamos la URL y ejecutamos en una consola:
 
 ```shell
-git clone <url_proyecto>
+$ git clone <url_proyecto>
 ```
 
 Podemos poner un alias al proyecto, para que en nuestro equipo local, se llame como nosotros queramos. Es decir, en remoto se puede llamar `cartas-magic-backend2` y nosotros querer llamarlo simplemente `magic-backend`. Este alias se aplica de la siguiente manera:
 
 ```shell
-git clone <url_proyecto> <alias_proyecto>
+$ git clone <url_proyecto> <alias_proyecto>
 ```
 
 ###  git remote
@@ -60,7 +51,7 @@ git clone <url_proyecto> <alias_proyecto>
 En cambio, iniciar un proyecto de git, solo nos sirve para operar en local, si queremos subir nuestro código a un repositorio en remoto hay que conectar nuestro repositorio local con el remoto de la siguiente manera:
 
 ```shell
-git remote add <origen> <url_proyecto>
+$ git remote add <origen> <url_proyecto>
 ```
 
 Normalmente GitHub o GitLab, cuando se crea un repositorio, te da unos comandos de guía para empezar. Esos comandos son para iniciar el proyecto en local y conectar el local con el remoto de la siguiente manera:
@@ -76,7 +67,7 @@ Una vez tenemos configurado y conectado nuestro proyecto, creamos los archivos y
 Para comprobar qué ficheros hemos cambiado ejecutaremos:
 
 ```shell
-git status
+$ git status
 ```
 
 Este comando nos devolverá (en caso de tener cambios) algo así:
@@ -85,16 +76,16 @@ Este comando nos devolverá (en caso de tener cambios) algo así:
 
 ### git add
 
-Una vez tenemos cambios sin tener en cuenta en nuestro proyecto, para hacer una primera subida a nuestro repositorio remoto tendremos que usar el comando `add` con un parametro, nombre o nombres de los ficheros que queremos añadir, o un `.` para añadir todo.
+Una vez tenemos cambios en nuestro proyecto, para hacer una primera subida a nuestro repositorio remoto tendremos que usar el comando `add` con un parámetro, nombre o nombres de los ficheros que queremos añadir, o un `.` para añadir todo.
 
 Con esta ejecución, añadiremos los cambios a la fase de preparación de Git.
 
 ```shell
 # Por ficheros
-git add archivo1.txt test/test1.js
+$ git add archivo1.txt test/test1.js
 
 # Añadir todo
-git add . 
+$ git add . 
 ```
 
 Este paso nos permite poder crear un commit (un mensaje descriptivo) a esos cambios.
@@ -106,7 +97,7 @@ En este paso añadiremos un mensaje para agrupar todos los ficheros o cambios ap
 Si ejecutamos directamente `git commit` se nos abrirá el editor de texto que tengamos configurado por defecto, como pueden ser **nano**, **vi**, **vim** o **VSCode** y ahí podremos escribir nuestro commit, sin embargo, si el commit va a ser un mensaje relativamente corto, podemos usar el flag `-m`:
 
 ```shell
-git commit -m "Aqui iría nuestro mensaje descriptivo de nuestros cambios"
+$ git commit -m "Aqui iría nuestro mensaje descriptivo de nuestros cambios"
 ```
 
 Con esto ya tendríamos los cambios preparados y descritos, el siguiente paso sería subirlo a nuestro repositorio.
@@ -118,31 +109,30 @@ El comando `git push` es el que usaremos para subir nuestros cambios ya preparad
 Una vez tengamos los cambios preparados y descritos correctamente con un commit, ejecutaremos:
 
 ```shell
-git push <nombre_origen> <nombre_rama>
+$ git push <nombre_origen> <nombre_rama>
 ```
 
 Y esto subirá los cambios a nuestro repositorio remoto, al origen y rama (por defecto **master**) que le indiquemos, como podría ser lo siguiente:
 
 ```shell
-git push origin master
+$ git push origin master
 ```
 
-### git push
+### git pull
 
-
-Como he comentado al principio del post, en un proyecto de desarrollo de software se puede dar el caso de que trabajemos con otros compañeros, que tambien hacen cambios y subidas simultaneamente.
+Como he comentado al principio del post, en un proyecto de desarrollo de software se puede dar el caso de que trabajemos con otros compañeros, que también hacen cambios y subidas simultaneamente.
 
 Para que no haya conflictos en nuestro trabajo, tendremos que mantener el proyecto alineado y para eso tenemos el comando `git pull`, para bajarnos los cambios que esten en el repositorio remoto.
 
 Es muy similar al comando push:
 
 ```shell
-git pull <nombre_origen> <nombre_rama>
+$ git pull <nombre_origen> <nombre_rama>
 ```
 Aplicándolo al caso real, quedaría así:
 
 ```shell
-git pull origin master
+$ git pull origin master
 ```
 
 
