@@ -1,0 +1,22 @@
+import { Heading, Flex, Center, Box } from '@chakra-ui/react'
+
+const AffiliateSection = ({ title, products }) => {
+  return (
+        <Box as={'section'}>
+            <Box mt={5}>
+                <Heading as={'h2'} size={'xl'}>{title}</Heading>
+            </Box>
+            <Center>
+                <Flex w={'100%'} mt={4} wrap={'wrap'} justify={'flex-start'}>
+                    {
+                        products && products.map(product => (
+                            <Box as="article" m={6} key={product} dangerouslySetInnerHTML={{ __html: product }} />
+                        ))
+                    }
+                </Flex>
+            </Center>
+        </Box>
+  )
+}
+
+export default AffiliateSection
