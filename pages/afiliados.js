@@ -1,7 +1,7 @@
 import AlexCantonHead from '../components/AlexCantonHead'
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
-import { Container, Heading, Text, Flex, Center, Box } from '@chakra-ui/react'
+import { Container, Heading, Text, Box } from '@chakra-ui/react'
 import AffiliateSection from '../components/AffiliateSection/AffiliateSection'
 
 const AffiliatePage = () => {
