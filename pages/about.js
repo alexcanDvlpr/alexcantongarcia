@@ -6,10 +6,10 @@ import Footer from '../components/Footer/Footer'
 import { MDXRemote } from 'next-mdx-remote'
 import { getFileBySlug } from '../lib/mdx'
 
-const About = ({ source }) => {
+const About = ({ source, frontmatter }) => {
   return (
     <>
-      <AlexCantonHead index="true" title="Sobre mí | Alex Cantón" />
+      <AlexCantonHead metadata={{ ...frontmatter, index: true }} />
       <div className="main">
         <Header showTitle={true} />
         <Container className="aboutme__section" as="section" maxW="container.lg" >
@@ -31,11 +31,12 @@ export default About
 
 export async function getStaticProps () {
   const slug = 'about'
-  const { source } = await getFileBySlug(slug, 'pages')
+  const { source, frontmatter } = await getFileBySlug(slug, 'pages')
 
   return {
     props: {
-      source
+      source,
+      frontmatter
     }
   }
 }

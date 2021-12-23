@@ -10,9 +10,13 @@
 @import url('../components/PostHead/postHead.css');
 @import url('../components/Blockquote/blockquote.css');
 @import url('../components/YouTubeVideo/youtubeVideo.css');
+@import url('../components/GithubLink/githublink.css');
+@import url('../components/AffiliateSection/affiliateSection.css');
+
 
 /*  SECTIONS  */
 @import url('../components/sections/CompanySection/companySection.css');
+@import url('../components/sections/CVSection/cvSection.css');
 @import url('../components/sections/HomeSection/homeSection.css');
 
 /* GLOBAL STYLES */
@@ -91,8 +95,14 @@ a:focus {
   border-radius: 4px;
 }
 
-.article-content p {
+.article-content p,
+.aboutme__content p {
+  text-align: justify;
   line-height: 1.7rem;
+}
+
+.customImage__alt {
+  text-align: center !important;
 }
 
 .post-metadata ul {
@@ -130,6 +140,7 @@ p code {
 }
 
 .underline {
+  margin-top: 32px;
   text-decoration: underline;
   text-decoration-color: #00c896;
 }

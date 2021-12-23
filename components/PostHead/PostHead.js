@@ -18,7 +18,7 @@ const PostHead = ({ metadata }) => {
             <Heading as="h1" size="2xl">{title}</Heading>
             <Box className="metadata-content" mt={3}>
                 <Box className="author-content">
-                    <Avatar size="sm" name={author} src={`/${avatar}`} />
+                    <Avatar size="sm" name={author} src={`${avatar}`} />
                     <Text as="p" ml={4} fontSize="lg">{author}</Text>
                 </Box>
                 <Box className="article-metadata-content">
@@ -30,7 +30,7 @@ const PostHead = ({ metadata }) => {
             <Box mt={3}>
                 {
                     tags.map(tag => (
-                        <Tag mr={2} key={tag} style={ { backgroundColor: TAGS[tag], color: '#fff', opacity: '.7' } }>{tag}</Tag>
+                        <Tag mr={2} key={tag} style={ { backgroundColor: TAGS[tag], color: '#fff' } }>{tag}</Tag>
                     ))
                 }
             </Box>
