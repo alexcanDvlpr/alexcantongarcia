@@ -10,7 +10,7 @@ const AffiliateSection = ({ title, products }) => {
                 <Flex w={'100%'} mt={4} wrap={'wrap'} justify={'flex-start'}>
                     {
                         products && products.map(product => (
-                            <Box as="article" m={6} key={product} dangerouslySetInnerHTML={{ __html: product }} />
+                            <Box as="article" className='productsBox' key={product} dangerouslySetInnerHTML={{ __html: product }} />
                         ))
                     }
                 </Flex>

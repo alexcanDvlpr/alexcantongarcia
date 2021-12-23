@@ -11,6 +11,8 @@
 @import url('../components/Blockquote/blockquote.css');
 @import url('../components/YouTubeVideo/youtubeVideo.css');
 @import url('../components/GithubLink/githublink.css');
+@import url('../components/AffiliateSection/affiliateSection.css');
+
 
 /*  SECTIONS  */
 @import url('../components/sections/CompanySection/companySection.css');
