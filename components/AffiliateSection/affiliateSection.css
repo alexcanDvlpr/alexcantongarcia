@@ -1,0 +1,15 @@
+.productsBox {
+    margin: 26px;
+}
+
+@media only screen and (max-width: 600px) {
+    .productsBox {
+        margin: 15px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .productsBox {
+        margin: 6px;
+    }
+}
