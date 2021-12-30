@@ -1,6 +1,6 @@
 ---
-title: 'Aprender JS básico paso a paso en 2022'
-seo_title: '▷ Aprender JS básico 【 paso a paso 】en 2022'
+title: 'Aprender JavaScript básico paso a paso en 2022'
+seo_title: '▷ Aprender JavaScript básico 【 paso a paso 】en 2022'
 author: 'Alex Cantón'
 avatar: 'https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639592290/Blog/alex_r0u07u.webp'
 date: '2022-01-04'
@@ -119,24 +119,137 @@ if (!isExist) {
 
 #### Arrays
 
-Los **Arrays** son lo más parecido a una lista, puedes almacenar todo tipo de datos en ella.
+Los **Arrays** son lo más parecido a una lista, puedes almacenar todo tipo de datos en ella. Su primer índice empezaría por 0 hasta N datos tengamos, por ejemplo:
 
+```js
+/**
+ * Dado el siguiente array, para obtener el 25 en una variable
+ * tendremos que hacer lo siguiente.
+*/
+const arr = [ 'Hola', 25, true, false, 'adios']
+
+const greetings = arr[0]
+const age = arr[1]
+console.log(age) // Output: 25
+console.log(greetings) // Output: Hola
+```
+
+Podemos calcular cuántos elementos tenemos en un array, gracias al método `.length` el cual nos devuelve el numero de valores que tiene el array:
+
+```js
+const arr = [ 'Hola', 25, true, false, 'adios']
+
+console.log(arr.length) // Output: 5
+```
+
+### Estructuras
+
+Una vez sabemos qué son las variables y de qué tipos pueden llegar a ser, es momento de ver cómo podemos operar con ellas, tenemos los elementos condicionales como los **If**, que en dada una condición ejecuta un bloque de código u otro y por otro lado las estructuras de tipo bucle.
+
+#### Elementos Condicionales
+
+Son las estructuras que dada una condición, se ejecuta un bloque de código u otro, lo veremos en los siguientes ejemplos.
+
+##### If
+
+Al igual que en otros lenguajes de programación tenemos la condición **If**. Que se encarga de ejecutar un bloque de código si la condición dada es correcta:
+
+```js
+// Version 1
+const age = 17;
+let isAdult = true;
+
+if (age >= 18) {
+    isAdult = true;
+} else {
+    isAdult = false;
+}
+console.log(isAdult) // Output: false
+
+// Version 2
+const age = 27;
+let isAdult = true;
+
+if (age >= 18) {
+    isAdult = true;
+}
+console.log(isAdult) // Output: true
+```
+
+##### If Ternario
+
+El If ternario es una manera de intentar tener estas condiciones un poco más limpias, siguiendo el mismo ejemplo que en el caso anterior podríamos codificar esto:
+
+```js
+const age = 27;
+const isAdult = (age >= 18) ? true : false;
+console.log(isAdult) // Output: true
+```
+
+En este caso asignamos directamente el valor a `isAdult` comprobando la condición entre paréntesis, en caso de cumplirse, se asigna el valor que hay despues de `?`, sino el valor que hay despues de `:`.
+
+#### Bucles 
+
+Los bucles son aquellas estructuras que nos hacen recorrer una lista el X número de veces que posiciones tenga o nos obliga a recorrer una lista hasta que una condición se deja de cumplir. Tenemos los bucles **While**, **Do-While**, **For**, **For-In** y **For-Of**.
+
+##### While
+
+El bucle While, como su significado indica, se ejecuta "mientras" una condición se cumple:
+
+```js
+let age = 3;
+
+while(age > 0) {
+    // Do Something
+    console.log('Vuelta')
+    age--
+}
+```
+
+Este while, lo que hará será ejecutar el bloque de código que este en su interior mientras la variable age, con un valor de 3, sea mayor a 0. En este caso, entramos en el bucle, porque la condición sí que se cumple. Se ejecutará el `console.log()` y se le restará 1 a la variable age.
+
+Con lo cual, repitiendo este procedimiento, sólo habremos dado 3 vueltas al bucle while.
+
+##### Do While
+
+El bucle **Do-While** es practicamente idéntico al bucle While tradicional, simplemente que antes de entrar en el while, **SIEMPRE** va a ejecutar un bloque de código.
+
+```js
+let age = 3;
+do{
+    age--
+     // Do Something
+    console.log(`Vuelta ${age}`)
+}
+while(age > 0);
+```
+
+Se ejecuta una vez el código de la sección **do**, si luego la condición del **while** se cumple, se vuelve a ejecutar y asíi tantas veces como condiciones cumpla el bucle.
+
+##### For
+
+Los bucles **for** también se ejecutan hasta que la condición especificada sea `false` y su sintaxis es parecida a la de un for en Java.
+
+```js
+
+for (let i = 0; i < 5; i++) {
+    console.log(`Vuelta Nº ${i}`)
+}
+
+/**
+ * Output:
+ * "Vuelta 0"
+ * "Vuelta 1"
+ * "Vuelta 2"
+ * "Vuelta 3"
+ * "Vuelta 4"
+*/
+```
+
+El bucle `for` es muy útil para recorrer listas y aplicar algún cambio u obtener datos.
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 
-
-### Condicionales
-
-#### If
-
-#### If Ternario
-
-### Bucles 
-
-#### For, For of, For in 
-
-#### While
-
-#### Do While
+#####  For of, For in 
