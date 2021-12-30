@@ -1,5 +1,6 @@
 /* eslint-disable react/display-name */
 import { Heading, UnorderedList, OrderedList, ListItem, Text } from '@chakra-ui/react'
+import AffiliateLink from './AffiliateSection/AffiliateLink'
 import YoutubeVideo from './YouTubeVideo/YouTubeVideo'
 import CustomImage from './CustomImage/CustomImage'
 import Blockquote from './Blockquote/Blockquote'
@@ -27,5 +28,6 @@ export default {
   Separator,
   YoutubeVideo,
   Blockquote,
-  GithubLink
+  GithubLink,
+  AffiliateLink
 }
