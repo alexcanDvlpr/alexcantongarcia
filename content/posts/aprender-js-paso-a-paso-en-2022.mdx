@@ -1,0 +1,141 @@
+---
+title: 'Aprender JS básico paso a paso en 2022'
+seo_title: '▷ Aprender JS básico 【 paso a paso 】en 2022'
+author: 'Alex Cantón'
+avatar: 'https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639592290/Blog/alex_r0u07u.webp'
+date: '2022-01-04'
+description: ''
+tags:
+    - 'Desarrollo'
+    - 'JavaScript'
+---
+
+Como ya he podido mencionar en algún post anterior, el lenguaje **JavaScript** es conocido como el lenguaje de la web, es un lenguaje de scripting, eso quiere decir que no necesitamos de un [compilador de código](https://es.ryte.com/wiki/Compilador) para que el código nos funcione, sino que corre directamente en la ejecución del mismo.
+
+Se creo en el año 1995, el mismo en el que salió Java, para intentar añadir programas a las páginas web ya que en aquella época, la web como la conocemos hoy en día no existia y el **HTML** era demasiado simple, hasta el punto que se limitaba a agrupar tablas, textos y alguna imágen.
+
+Pero claro, en estos casi 27 años, el lenguaje ya no es el que se creó para añadir programas, ha evolucionado mucho (aunque tuvo muchos retractores) y hoy en día es el lenguaje por excelencia para el Frontend y algunos desarrollos de Backend. Dicho esto, ¡vamos a ver como se empieza!
+
+### Evolución de JS
+
+A lo largo de estos 27 años, se han ido añadiendo mejoras y modificando el código base, para que el uso de JS se ajuste al gusto de los programadores y de la época y herramientas en la que se encuentra, y para esto, los desarrolladores nos basamos en unos estándares que marca la evolución de JavaScript.
+
+Eso es el **ECMASCRIPT o ES**, en el cual, desde el ES5 y ES6 ha habido un gran cambio a mejor en el lenguaje.
+
+### ¿Qué es una variable en JavaScript?
+
+Las variables en JS, y en cualquier lenguaje, es una pequeña parte de la memoria en la que almacenaremos un valor, puede ser un texto o un número y un largo etc.
+
+Tenemos tres formas de declarar variables en JS:
+
+`var`: La palabra reservada **var** sirve para declarar variables de ámbito global, que sirvan en todo nuestro fichero de JS. Se desaconseja su uso desde **[ES6](https://www.w3schools.com/js/js_es6.asp)**
+
+```js
+var str = 'Hola Mundo'; // Tipo string
+var num = 25; // Tipo number
+var trueFalse = true; // Tipo boolean
+```
+
+`let`: La palabra reservada **let** sirve para declarar variables locales dentro del Scope. Vamos a verlo en un ejemplo:
+
+```js
+/**
+ * Al estar en ámbitos distintos, hola - "Hello There" en el global y hola - "General Kenobi" en el if
+ * se pueden llamar igual porque no se machaca la una a la otra y cada Output tiene su valor.
+*/
+let entrar = true;
+let hola = 'Hello There';
+
+if (entrar) {
+    let hola = 'General Kenobi';
+    console.log(hola); // Output: General Kenobi
+} // <- Salimos del if
+console.log(hola); // Output: Hello There
+
+```
+
+`const`: La palabra reservada **let** sirve para declarar variables locales dentro del Scope y que su valor no es mutable, es decir, que no puede cambiar su valor.
+
+```js
+/**
+ * La palabra reservada const funciona igual que let, pero no se le puede cambiar el valor.
+*/
+const name = 'Alex Cantón'
+name = 'Han Solo'
+
+/**
+ *  La línea de Han Solo daría el siguieinte error: 
+ *  Uncaught TypeError: Assignment to constant variable.
+ */
+
+```
+
+Estas son las tres formas de declarar variables en **JavaScript**, ahora veremos qué tipos de valores existen.
+
+### Tipos de variables
+
+Ya hemos visto qué son y cómo declarar variables en JS, pero no sabemos qué tipo de datos pueden almacenar, en esta sección vamos a ver los distintos tipos que tienen las variables, pueden ser:
+
+#### Number
+
+El tipo `number` hace referencia a las variables de tipo número, entre ellos se encuentran los números enteros, negativos y decimales. La variable de tipo **number** se escribe sin comillas, el valor numérico tal cual, como por ejemplo:
+```js
+const age = 24;
+```
+
+#### Strings
+
+Los **Strings** o Cadenas de Texto, son otro tipo de variable en JS en la que almacenamos cualquier tipo de texto que necesitemos para nuestra web o aplicación. Para poder usarlas tendremos que meter el valor de la variable entre comillas doble (""), simples ('') o crear un Template String (``).
+
+Los Template String sirven para concatenar otras variables dentro del texto de forma más rápiida y eficaz.
+
+```js
+const name = 'Alex Cantón'
+
+let text1 = "Me llamo " + name;
+let text2 = 'Me llamo ' + name;
+let text3 = `Me llamo ${name}`;
+
+// Las tres opciones devolverán: 'Me llamo Alex Cantón'
+```
+
+#### Booleans
+
+Las variables de tipo **Boolean** son variables que solo pueden tener un valor entre dos opciones, **true** y **false**, lo más parecido al código binario, o un 1 o un 0.
+
+El valor **false** se puede dar en los siguientes casos: Que la variable tenga valor **0**, **-0**, **null**, **false**, **NaN**, **undefined**, o una **cadena de texto vacía** ('').
+
+```js
+const isExist = true;
+
+if (!isExist) {
+    console.log('La variable es false')
+} else {
+    console.log('La variable es true')
+}
+
+// Output: La variable es true
+```
+
+#### Arrays
+
+Los **Arrays** son lo más parecido a una lista, puedes almacenar todo tipo de datos en ella.
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+### Condicionales
+
+#### If
+
+#### If Ternario
+
+### Bucles 
+
+#### For, For of, For in 
+
+#### While
+
+#### Do While
