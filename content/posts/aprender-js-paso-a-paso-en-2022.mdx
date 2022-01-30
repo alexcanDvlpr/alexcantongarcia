@@ -3,7 +3,7 @@ title: 'Tipos de Variables en JavaScript en 2022'
 seo_title: '▷ Tipos de Variables en JavaScript 2022'
 author: 'Alex Cantón'
 avatar: 'https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639592290/Blog/alex_r0u07u.webp'
-date: '2022-01-27'
+date: '2022-02-01'
 description: 'En JavaScript como en todo lenguaje, existen distintos tipos de variables. String para los textos, number para los números, boolean para los valores verdaderos y falsos... y un largo etc. Aprende todos los tipos de variables que hay en JavaScript con Alex Cantón.'
 tags:
     - 'Desarrollo'
@@ -40,17 +40,18 @@ var trueFalse = true; // Tipo boolean
 
 ```js
 /**
- * Al estar en ámbitos distintos, hola - "Hello There" en el global y hola - "General Kenobi" en el if
- * se pueden llamar igual porque no se machaca la una a la otra y cada Output tiene su valor.
+ * Al estar en ámbitos distintos, greeting - "Hello There" en el global y greeting - 
+ * "General Kenobi" en el if se pueden llamar igual porque no se machaca la una 
+ * a la otra y cada Output tiene su valor.
 */
-let entrar = true;
-let hola = 'Hello There';
+let isExist = true;
+let greeting = 'Hello There';
 
-if (entrar) {
-    let hola = 'General Kenobi';
-    console.log(hola); // Output: General Kenobi
+if (isExist) {
+    let greeting = 'General Kenobi';
+    console.log(greeting); // Output: General Kenobi
 } // <- Salimos del if
-console.log(hola); // Output: Hello There
+console.log(greeting); // Output: Hello There
 
 ```
 
@@ -81,12 +82,9 @@ Ya hemos visto qué son y cómo declarar variables en JS, pero no sabemos qué t
 El tipo `number` hace referencia a las variables de tipo número, entre ellos se encuentran los números enteros, negativos y decimales. La variable de tipo **number** se escribe sin comillas, el valor numérico tal cual, como por ejemplo:
 ```js
 const age = 24;
+
+console.log(typeof age) // Output: "number"
 ```
-
-#### BigInt
-
-adsads
-
 
 #### Strings
 
@@ -102,6 +100,7 @@ let text2 = 'Me llamo ' + name;
 let text3 = `Me llamo ${name}`;
 
 // Las tres opciones devolverán: 'Me llamo Alex Cantón'
+console.log(typeof text3) // Output: "string"
 ```
 
 #### Booleans
@@ -120,6 +119,7 @@ if (!isExist) {
 }
 
 // Output: La variable es true
+console.log(typeof isExist) // Output: "boolean"
 ```
 
 #### Arrays
@@ -137,6 +137,8 @@ const greetings = arr[0]
 const age = arr[1]
 console.log(age) // Output: 25
 console.log(greetings) // Output: Hola
+
+console.log(typeof arr) // Output: "object"
 ```
 
 Podemos calcular cuántos elementos tenemos en un array, gracias al método `.length` el cual nos devuelve el numero de valores que tiene el array:
@@ -149,12 +151,48 @@ console.log(arr.length) // Output: 5
 
 #### Undefined
 
-<br/><br/><br/><br/><br/><br/><br/>
+Una variable de tipo undefined, tiene un valor primitivo que se le asigna directamente a las variables cuando son declaradas pero no inicializadas, como se puede ver en el ejemplo:
+
+```js
+// Declaramos sin inicializar
+let name;
+
+console.log(name) // Output: "undefined"
+```
+
+Para poder ver el tipo de la variable podemos usar `typeof`
+
+```js
+let name;
+
+console.log(typeof name) // Output: "undefined"
+```
 
 #### Object
 
-<br/><br/><br/><br/><br/><br/><br/>
+Los objetos son las estructuras de datos "complejas" que usamos para mandar informacion a través de nuestra aplicación. Normalmente los usamos para extrapolar conceptos del mundo real a nuestro código, como por ejemplo, un coche.
 
-#### Symbol
+En este ejemplo lo veremos mejor:
 
-<br/><br/><br/><br/><br/><br/><br/>
+```js
+const coche = {
+    marca: 'Ford',
+    modelo: 'Focus',
+    matricula: '0000XXX',
+    color: 'blanco',
+    itvAprobada: true,
+    ruedaRepuesto: false
+}
+
+console.log(typeof coche) // Output "object"
+```
+
+Esta estructura puede ser anidada y todo lo compleja que queramos. **JavaScript** al ser un lenguaje orientado a objetos, como otros lenguajes de programación, se basa en estos componentes para codificar.
+
+### Conclusión
+
+Para empezar a programar en cualquier lenguaje lo primero que debemos saber es cómo usar las variables y todos los beneficios que nos dé el lenguaje y de qué tipo son las variables. Para el lenguaje JavaScript hemos visto los anteriores tipos, luego hay otros como **Map**, **Set** o **Date** que si les aplicas un `console.log(typeof XXX)` te devolverá **object**.
+
+Esto es porque, aunque haya Strings, Numbers, Boolean etc, casi el 90% de lo que hay en JavaScript son objetos. De hecho cuando se trabaja con JS en el front, el **DOM** (Árbol de componentes del navegador) son objetos, con sus funciones y propiedades.
+
+Conocer los tipos nos servirá en nuestro aprendizaje en JavaScript y sobretodo para la migración a **TypeScript** el cual usa tipado.
