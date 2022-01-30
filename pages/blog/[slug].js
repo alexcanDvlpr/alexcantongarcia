@@ -2,7 +2,6 @@ import AlexCantonHead from '../../components/AlexCantonHead'
 import MDXComponents from '../../components/MDXComponents'
 import PostHead from '../../components/PostHead/PostHead'
 import { getFileBySlug, getFiles } from '../../lib/mdx'
-import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import { Container } from '@chakra-ui/react'
 import { MDXRemote } from 'next-mdx-remote'
@@ -12,7 +11,6 @@ const Post = ({ source, frontmatter }) => {
     <>
       <AlexCantonHead metadata={{ ...frontmatter, slug: `blog/${frontmatter.slug}`, index: true }} />
       <div className="main">
-        <Header showTitle={true} />
         <Container as="section" maxW="container.lg" style={{ marginTop: '78px' }}>
           <PostHead metadata={{ ...frontmatter }} />
           <Container as="article" maxW={['container.xl', 'container.xl', '740px']} className="article-content" my={8}>

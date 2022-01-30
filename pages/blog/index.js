@@ -1,7 +1,6 @@
 import { Container, Heading, Box, Center } from '@chakra-ui/react'
 import AlexCantonHead from '../../components/AlexCantonHead'
 import PostCard from '../../components/PostCard/PostCard'
-import Header from '../../components/Header/Header'
 import { getAllFilesMetadata } from '../../lib/mdx'
 import { orderByDates } from '../../lib/date'
 
@@ -11,7 +10,6 @@ const Blog = ({ posts }) => {
     <>
       <AlexCantonHead metadata={metadata} />
       <div className="main">
-        <Header showTitle={true} />
         <Container maxW="container.lg" className="blog-container">
           <Center className="last-articles-container">
             <Box className="last-articles-heading">

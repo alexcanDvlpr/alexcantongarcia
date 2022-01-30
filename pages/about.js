@@ -1,7 +1,6 @@
 import { Container, Grid, GridItem } from '@chakra-ui/react'
 import AlexCantonHead from '../components/AlexCantonHead'
 import MDXComponents from '../components/MDXComponents'
-import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import { MDXRemote } from 'next-mdx-remote'
 import { getFileBySlug } from '../lib/mdx'
@@ -11,7 +10,6 @@ const About = ({ source, frontmatter }) => {
     <>
       <AlexCantonHead metadata={{ ...frontmatter, index: true }} />
       <div className="main">
-        <Header showTitle={true} />
         <Container className="aboutme__section" as="section" maxW="container.lg" >
           <Grid className="aboutme__grid" templateColumns="repeat(8, 1fr)" gap={2}>
             <GridItem colSpan="1"></GridItem>

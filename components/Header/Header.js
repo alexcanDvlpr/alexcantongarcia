@@ -1,8 +1,12 @@
 import ToggleThemeColorButton from '../ToggleTheme/ToggleThemeColorButton'
 import { Link, Heading } from '@chakra-ui/react'
 import { routes } from '../../data/menu_items'
+import { useRouter } from 'next/router'
 
-const Header = ({ showTitle = false }) => {
+const Header = () => {
+  const { asPath } = useRouter()
+  const showTitle = (asPath !== '/')
+
   const blogHeader = (showTitle) ? 'blogHeader' : ''
   const hasTitle = (showTitle) ? 'hasTitle' : ''
 

@@ -1,6 +1,5 @@
 import AlexCantonHead from '../components/AlexCantonHead'
 import Footer from '../components/Footer/Footer'
-import Header from '../components/Header/Header'
 import { Container, Heading, Text, Box } from '@chakra-ui/react'
 import AffiliateSection from '../components/AffiliateSection/AffiliateSection'
 
@@ -51,7 +50,6 @@ const AffiliatePage = () => {
         <>
             <AlexCantonHead metadata={metadata} />
             <div className="main">
-                <Header showTitle={true} />
                 <Container className="affiliates__section" as="section" maxW="container.lg" >
                     <div className="affiliates__content">
                         <Heading size="xl">Bienvenidos a la página de Afiliación</Heading>

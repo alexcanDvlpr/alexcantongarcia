@@ -1,6 +1,5 @@
 import AlexCantonHead from '../components/AlexCantonHead'
 import { Container, Box, Heading, Link, Image } from '@chakra-ui/react'
-import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 
 const Custom404Page = () => {
@@ -9,7 +8,6 @@ const Custom404Page = () => {
     <>
       <AlexCantonHead metadata={ metadata } />
       <div className="main">
-        <Header showTitle={true} />
         <Container className="error404" as="section" maxW="container.lg" >
           <Box className="errorText">
             <Heading mb={4} as="h1" size="2xl">¡Vaya...!</Heading>

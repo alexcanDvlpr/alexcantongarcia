@@ -1,5 +1,6 @@
 import AlexCantonHead from '../components/AlexCantonHead'
 import { ChakraProvider } from '@chakra-ui/react'
+import Header from '../components/Header/Header'
 import theme from '../styles/theme'
 import '../styles/globals.css'
 
@@ -28,6 +29,7 @@ function MyApp ({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme} initialColorMode={theme.config.initialColorMode}>
       <AlexCantonHead />
+      <Header />
       <Component {...pageProps} />
     </ChakraProvider>
   )
