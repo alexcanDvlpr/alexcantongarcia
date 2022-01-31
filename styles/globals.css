@@ -95,6 +95,15 @@ a:focus {
   border-radius: 4px;
 }
 
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  margin-top: 1.5em;
+}
+
 .article-content p,
 .aboutme__content p {
   text-align: justify;
