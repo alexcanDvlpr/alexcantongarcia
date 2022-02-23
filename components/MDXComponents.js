@@ -22,7 +22,7 @@ export default {
   ol: (props) => <OrderedList {...props} />,
   li: (props) => (
     <ListItem>
-      {props.children}
+      <Text fontSize={'lg'}>{props.children}</Text>
     </ListItem>
   ),
   Separator,

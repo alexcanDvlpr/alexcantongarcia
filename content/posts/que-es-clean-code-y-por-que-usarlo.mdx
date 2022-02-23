@@ -1,0 +1,57 @@
+---
+title: '¿Qué es Clean Code y por qué usarlo?'
+seo_title: '▷ ¿Qué es Clean Code y por qué usarlo?'
+author: 'Alex Cantón'
+avatar: 'https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639592290/Blog/alex_r0u07u.webp'
+date: '2022-03-01'
+description: ''
+tags:
+    - 'Desarrollo'
+---
+
+**El Código Limpio** (Clean Code) **de Robert C. Martin** (también conocido como [Uncle Bob](https://es.wikipedia.org/wiki/Robert_C._Martin)) es uno de los libros que todo programador debe leer en algún momento de su vida, ya seas Junior o Senior, sea la primera vez que te lo lees o la vigésima vez, siempre encuentras algún consejo que puedes aplicar.
+
+**Robert C. Martin** es un ingeniero de software y autor de Estados Unidos 🇺🇸 que además de esta joya para la lectura de un programador ha creado otros libros entre los que se encuentra **Arquitectura Limpia** o **El Limpiador de Código** y hoy nos vamos a centrar en Clean Code, desde luego, el libro que le ha dado más reconocimiento a nivel mundial.
+
+Si quieres obtener el libro de **Uncle Bob** te dejo aquí [el enlace de afiliado](https://amzn.to/3h7A2IU) para que lo puedas adquirir en Amazon.
+
+![Clean Code por Robert C. Martin](https://res.cloudinary.com/dnnfr3jhi/image/upload/v1645635360/Blog/Posts/clean-code/cleancode_k4ktv9.webp)
+
+ 
+Programar para quien este empezando puede ser un mundo de caos, entre los numerosos lenguajes, y que luego los humanos somos cada uno de nuestro padre y nuestra madre, por no decir que somos lo más raros que existe y si algo lo podemos hacer de la forma más rápida y mal... ¡lo hacemos! Entonces **Uncle Bob**, en este libro nos propone seguir unas guías y una serie de buenas prácticas para que el mundo del código no sea un caos, más de lo que ya es.
+
+Un claro ejemplo de lo que este libro quiere conseguir es la siguiente imágen:
+
+![Resumen de lo que consigue un Código Limpio y organizado.](https://res.cloudinary.com/dnnfr3jhi/image/upload/v1645634882/Blog/Posts/clean-code/Clean-Code-Resumen_mv6iik.webp)
+
+En lugar de decir "Este código es una mierda" numerosas veces y de distintas formas, Uncle Bob propone ser ordenados y escribir código cuando sea necesario y que sean concisos.
+
+**Código Limpio** esta compuesto por 17 enriquecedores capitulos, y te voy a comentar algunas de las perlas que nos deja Uncle Bob en esos capítulos.
+
+### La regla del Boy Scout
+
+La regla del Boy Scout tiene mucho sentido, y se puede extrapolar a muchos ámbitos en la vida. Esta regla según el libro es que los boy scout intentan dejar los lugares por los que van un poco mejor de cómo se lo han encontrado. Es decir, hablando de desarrollo, hay que dejar el código que vemos y tocamos un poco mejor de cómo nos lo hemos encontrado.
+
+Por ejemplo, si vas a desarrollar un mantenimiento o tocar algo que ha hecho un compañero y vemos algo que se pueda mejorar, lo ideal, sería dedicar un poco de tiempo para mejorar ese bloque de código y comentarselo al equipo para que poco a poco el código este mejor y no acumulemos lo que se llama la **"Deuda Técnica"**.
+
+La deuda técnica **es el coste de de mantener y/o arreglar un software mal construido, normalmente por hacerlo rápido o sin atención**.
+
+### Las Funciones y Métodos
+
+Las funciones y métodos son bloques de código que realizan una determinada función en el código, y Robert lo que comenta en el libro es que estos bloques tendrían que:
+
+- Ser de unas 20 líneas aproximadamente.
+- Tener un nombre descriptivos: `getAllBooksFromAuthorId()`
+- El nombre no importa si es corto o largo, de hecho cuanto más largo puede ser más descriptivo.
+- El Principio de Responsabilidad Única
+- Recomendable hasta 2 parámetros, 3 ya son demasiados.
+
+### Principio de Responsabilidad Única
+
+Respecto a los métodos y funciones, el mayor principio que hay que intentar tratar es el de la **Responsabilidad Única**, esto quiere decir que una función tiene que hacer una única cosa, lo que el nombre de esta indique.
+
+Con el principio de Responsabilidad Única conseguimos no llevarnos sorpresas de que un método haga más cosas de las que el nombre indica.
+
+### Comentarios
+
+Otra cosa importante son los comentarios, aunque se nos dice en el libro que un buen código habla por sí mismo
