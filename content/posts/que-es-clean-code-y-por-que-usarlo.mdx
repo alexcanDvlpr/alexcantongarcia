@@ -26,7 +26,7 @@ Un claro ejemplo de lo que este libro quiere conseguir es la siguiente imágen:
 
 En lugar de decir "Este código es una mierda" numerosas veces y de distintas formas, Uncle Bob propone ser ordenados y escribir código cuando sea necesario y que sean concisos.
 
-**Código Limpio** esta compuesto por 17 enriquecedores capitulos, y te voy a comentar algunas de las perlas que nos deja Uncle Bob en esos capítulos.
+ **Código Limpio** esta compuesto por 17 enriquecedores capitulos, y te voy a comentar algunas de las perlas que nos deja Uncle Bob en esos capítulos.
 
 ### La regla del Boy Scout
 
@@ -48,10 +48,68 @@ Las funciones y métodos son bloques de código que realizan una determinada fun
 
 ### Principio de Responsabilidad Única
 
-Respecto a los métodos y funciones, el mayor principio que hay que intentar tratar es el de la **Responsabilidad Única**, esto quiere decir que una función tiene que hacer una única cosa, lo que el nombre de esta indique.
+Respecto a los métodos y funciones, la prioridad que, como desarrolladores, hay que alcanzar es el de la **Responsabilidad Única**, esto quiere decir que una función tiene que hacer una única cosa, lo que el nombre de esta indique.
 
-Con el principio de Responsabilidad Única conseguimos no llevarnos sorpresas de que un método haga más cosas de las que el nombre indica.
+Con el principio de Responsabilidad Única conseguimos no llevarnos sorpresas de que un método haga más cosas de las que el nombre indica. Por ejemplo:
+
+```js
+class Jedi {
+    constructor(name, power, lightsiberColor) {
+        this.name = name;
+        this.power = power;
+        this.lightsiberColor = lightsiberColor;
+    }
+
+    getName() {
+        return this.name;
+    }
+
+    getPower() {
+        return this.power;
+    }
+
+    getLightsiberColor() {
+        return this.lightsiberColor;
+    }
+
+    setName(newName) {
+        this.name = newName;
+    }
+
+    setPower(newPower) {
+        this.power = newPower;
+    }
+
+    setLightsiberColor(newLightsaberColor) {
+        this.lightsiberColor = newLightsaberColor;
+    }
+}
+```
+
+En este ejemplo, todas las variables y funciones son exclusivamente de la clase `Jedi` y no mezclamos otras posibles clases en ella.
 
 ### Comentarios
 
-Otra cosa importante son los comentarios, aunque se nos dice en el libro que un buen código habla por sí mismo
+Otra cosa importante son los comentarios, aunque se nos dice en el libro que un buen código habla por sí mismo, un mismo código puede pasar por las manos de infinidad de programadores, hay de todo. Puede que un proyecto lo toquen siempre las mismas 4 o 5 personas, o que un proyecto que sea de más larga duración pasen por él unas 10 personas al año por que tenga mucha rotación.
+
+Esto quiere decir que si un bloque de código, una funció o método estan comentados le dará al programador un contexto de qué es lo que hace ese bloque y una facilidad, por eso **es muy importante escribir buenos comentarios** y por ejemplo en el caso de **JS** podemos añadir un comentario que sirva como la documentación de este, se llama JSDoc, del cual hablaremos en otro post. 
+
+```js
+const folder = './folder1/'
+const filename = 'file.txt'
+
+// Juntamos la variable folder y filename para obtener la ruta completa
+const path = path.join(folder, filename);
+console.log(path);
+// Output: './folder1/file.txt'
+```
+
+Este ejemplo es my sencillo, rozando lo innecesario, pero estos comentarios son útiles cuando hay un bloque de código complejo y le tienes que explicar al próximo desarrollador que toque ese código (que puedes ser tu mismo en unos meses) qué es lo que hace.
+
+### Conclusión. ¿Por qué leer Clean Code?
+
+Como te he comentado al principio del post, el libro de Clean Code es muy extenso, y da muchas reglas o guías como para explicarlas detalladamente en un post.
+
+Pero estas pueden ser de las cosas que menciona **Uncle Bob** con las que un programador junior se puede pegar al principio de su carrera laboral. Porque cuando entramos en una empresa, siempre nos tenemos que acostumbrar al estandar que tenga esa empresa, los formateadores de código (que a veces son personalizados), algunos procesos o formas de hacer las cosas en la Arquitectura del Software, que desde la experiencia de un junior hay conceptos que pueden escaparse un poco.
+
+Y no te sientas mal por que a lo mejor en las primeras revisiones de código (Merge Request o Pull Request) te digan que le tienes que cambiar el nombre a alguna variable para que sea más descriptiva, o que te falta algún comentario... Las revisiones de código son tanto para Juniors, Mid´s o Seniors, a todos se nos puede escapar algo o que a ojos del resto del equipo no esté claro.
