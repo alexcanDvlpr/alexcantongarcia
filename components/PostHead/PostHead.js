@@ -22,7 +22,7 @@ const PostHead = ({ metadata }) => {
                     <Text as="p" ml={4} fontSize="lg">{author}</Text>
                 </Box>
                 <Box className="article-metadata-content">
-                    <Text className="publishOn" as="p" fontSize="md">📅 {formatDate(date)}</Text>
+                    <Text className="publishOn" as="p" fontSize="md">📅 &nbsp; {formatDate(date)}</Text>
                     <Text className="headSeparator" mx={3}>|</Text>
                     <Text className="readingTime" as="p" fontSize="md">{`${printMinutes(timeToRead)} Minutos de lectura`}</Text>
                 </Box>

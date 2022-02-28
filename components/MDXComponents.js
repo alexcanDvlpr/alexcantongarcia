@@ -15,14 +15,14 @@ export default {
   h4: (props) => <Heading as="h4" mt={3} size="lg" {...props} />,
   h5: (props) => <Heading as="h5" mt={3} size="lg" {...props} />,
   h6: (props) => <Heading as="h6" mt={3} size="md" {...props} />,
-  p: (props) => <Text fontSize="lg" lineHeight={5} my={4} {...props} />,
+  p: (props) => <Text fontSize="lg" className="chakra-text css-19f11ly" lineHeight={5} my={4} {...props} />,
   a: (props) => <a {...props} className="article-link" target="_blank" rel="noreferrer">{props.children}</a>,
   img: (props) => <CustomImage {...props} />,
   ul: (props) => <UnorderedList {...props} />,
   ol: (props) => <OrderedList {...props} />,
   li: (props) => (
     <ListItem>
-      {props.children}
+      <Text fontSize={'lg'}>{props.children}</Text>
     </ListItem>
   ),
   Separator,
