@@ -2,7 +2,7 @@ import { Grid, Container, Text, Center, Link } from '@chakra-ui/react'
 
 const Footer = () => {
   const rss = [
-    { link: 'https://www.linkedin.com/in/alejandro-cant%C3%B3n-garc%C3%ADa-2a5b7311a/', name: 'Linkedin' },
+    { link: 'www.linkedin.com/in/alejandro-cantón-garcía', name: 'Linkedin' },
     { link: 'https://github.com/alexcanDvlpr', name: 'Github' },
     { link: 'https://www.instagram.com/alexcan.dvlpr/?hl=es', name: 'Instagram' },
     { link: 'https://www.alexcantongarcia.es/afiliados', name: 'Afiliados' }
