@@ -1,6 +1,10 @@
 import { Heading, Flex, Center, Box } from '@chakra-ui/react'
 
 const AffiliateSection = ({ title, products }) => {
+  if (products.length === 0) {
+    return null
+  }
+
   return (
         <Box as={'section'}>
             <Box mt={5}>
