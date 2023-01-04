@@ -39,37 +39,32 @@ const AffiliatePage = () => {
   ]
 
   const ownHobbies = [
-    '<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=alexcandvlp0b-21&language=es_ES&o=30&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=841772057X&linkId=97afbc9b36eeb9dc2e97e5c443c38dcb"></iframe>',
-    '<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=alexcandvlp0b-21&language=es_ES&o=30&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=8413416906&linkId=15ebd04ab86667252e5e45b71601fbd9"></iframe>',
-    '<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=alexcandvlp0b-21&language=es_ES&o=30&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=8413417872&linkId=56efe4ee7b7880fc6f0bf5d7b9cb0c4c"></iframe>',
-    '<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=alexcandvlp0b-21&language=es_ES&o=30&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=0714877719&linkId=6d0a312d704f2ce25cd442eab1b3c1f7"></iframe>',
-    '<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=alexcandvlp0b-21&language=es_ES&o=30&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0771RV2MX&linkId=beb396a3f4525a88df4467a83027b027"></iframe>'
   ]
 
   const metadata = { title: 'Página Afiliación | Alex Cantón', index: false, slug: 'afiliados' }
   return (
-        <>
-            <AlexCantonHead metadata={metadata} />
-            <div className="main">
-                <Header showTitle={true} />
-                <Container className="affiliates__section" as="section" maxW="container.lg" >
-                    <div className="affiliates__content">
-                        <Heading size="xl">Bienvenidos a la página de Afiliación</Heading>
-                        <Text mt={2} fontSize="lg">
-                            En esta sección, tendremos los distintos productos de Amazon que he comprado y os recomiendo a todos vosotros.
-                        </Text>
-                        <Box as={'main'} w={'100%'}>
-                            <AffiliateSection title={'Lecturas Recomendadas'} products={bookProducts} />
+    <>
+      <AlexCantonHead metadata={metadata} />
+      <div className="main">
+        <Header showTitle={true} />
+        <Container className="affiliates__section" as="section" maxW="container.lg" >
+          <div className="affiliates__content">
+            <Heading size="xl">Bienvenidos a la página de Afiliación</Heading>
+            <Text mt={2} fontSize="lg">
+              En esta sección, tendremos los distintos productos de Amazon que he comprado y os recomiendo a todos vosotros.
+            </Text>
+            <Box as={'main'} w={'100%'}>
+              <AffiliateSection title={'Lecturas Recomendadas'} products={bookProducts} />
 
-                            <AffiliateSection title={'Mi Setup'} products={ownProducts} />
+              <AffiliateSection title={'Mi Setup'} products={ownProducts} />
 
-                            <AffiliateSection title={'Otros Intereses'} products={ownHobbies} />
-                        </Box>
-                    </div>
-                </Container>
-            </div >
-            <Footer />
-        </>
+              <AffiliateSection title={'Otros Intereses'} products={ownHobbies} />
+            </Box>
+          </div>
+        </Container>
+      </div >
+      <Footer />
+    </>
   )
 }
 
