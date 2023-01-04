@@ -1,11 +1,11 @@
 import { Heading, Flex, Center, Box } from '@chakra-ui/react'
 
 const AffiliateSection = ({ title, products }) => {
-    if (products.length === 0) {
-        return null
-    }
+  if (products.length === 0) {
+    return null
+  }
 
-    return (
+  return (
         <Box as={'section'}>
             <Box mt={5}>
                 <Heading as={'h2'} size={'xl'}>{title}</Heading>
@@ -20,7 +20,7 @@ const AffiliateSection = ({ title, products }) => {
                 </Flex>
             </Center>
         </Box>
-    )
+  )
 }
 
 export default AffiliateSection
