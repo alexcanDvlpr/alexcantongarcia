@@ -44,28 +44,28 @@ const AffiliatePage = () => {
 
   const metadata = { title: 'Página Afiliación | Alex Cantón', index: false, slug: 'afiliados' }
   return (
-    <>
-      <AlexCantonHead metadata={metadata} />
-      <div className="main">
-        <Header showTitle={true} />
-        <Container className="affiliates__section" as="section" maxW="container.lg" >
-          <div className="affiliates__content">
-            <Heading size="xl">Bienvenidos a la página de Afiliación</Heading>
-            <Text mt={2} fontSize="lg">
-              En esta sección, tendremos los distintos productos de Amazon que he comprado y os recomiendo a todos vosotros.
-            </Text>
-            <Box as={'main'} w={'100%'}>
-              <AffiliateSection title={'Lecturas Recomendadas'} products={bookProducts} />
+        <>
+            <AlexCantonHead metadata={metadata} />
+            <div className="main">
+                <Header showTitle={true} />
+                <Container className="affiliates__section" as="section" maxW="container.lg" >
+                    <div className="affiliates__content">
+                        <Heading size="xl">Bienvenidos a la página de Afiliación</Heading>
+                        <Text mt={2} fontSize="lg">
+                            En esta sección, tendremos los distintos productos de Amazon que he comprado y os recomiendo a todos vosotros.
+                        </Text>
+                        <Box as={'main'} w={'100%'}>
+                            <AffiliateSection title={'Lecturas Recomendadas'} products={bookProducts} />
 
-              <AffiliateSection title={'Mi Setup'} products={ownProducts} />
+                            <AffiliateSection title={'Mi Setup'} products={ownProducts} />
 
-              <AffiliateSection title={'Otros Intereses'} products={ownHobbies} />
-            </Box>
-          </div>
-        </Container>
-      </div >
-      <Footer />
-    </>
+                            <AffiliateSection title={'Otros Intereses'} products={ownHobbies} />
+                        </Box>
+                    </div>
+                </Container>
+            </div >
+            <Footer />
+        </>
   )
 }
 
