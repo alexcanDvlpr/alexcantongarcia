@@ -8,7 +8,8 @@ const TAGS = {
   Desarrollo: 'rgba(0, 0, 0, .7)',
   Testing: '#rgba(20, 189, 0, .7)',
   Personal: '#rgba(0, 3, 169, .7)',
-  Nodejs: 'rgba(60, 135, 58, 1)'
+  Nodejs: 'rgba(60, 135, 58, 1)',
+  TypeScript: 'rgba(0, 122, 204, .7)'
 }
 
 module.exports = TAGS
