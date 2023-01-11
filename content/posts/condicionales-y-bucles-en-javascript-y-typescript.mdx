@@ -1,0 +1,222 @@
+---
+title: 'Condiciones y Bucles en JavaScript y TypeScript'
+seo_title: '▷ Condiciones y Bucles en JavaScript y TypeScript'
+author: 'Alex Cantón'
+avatar: 'https://res.cloudinary.com/dnnfr3jhi/image/upload/v1639592290/Blog/alex_r0u07u.webp'
+date: '2023-01-12'
+description: ''
+tags:
+    - 'Desarrollo'
+    - 'TypeScript'
+    - 'JavaScript'
+---
+
+Todos los lenguajes de programación, compilados o de scriptting) se encargan en resumidas cuentas de obtener datos, aplicarlos cierta lógica y devolver o almacenar esos datos para un uso posterior, y sí, acabo de resumir la programación en pocas palabras de forma muy valiente, habrá algún gurú que me corregirá.
+
+Dicho esto, los lenguajes de programación como **JavaScript** o **TypeScript** esta lógica la aplican básicamente con los condicionales y los bucles, y en este artículo vamos a ver cómo se usan en JavaScript y TypeScript.
+
+## Condicionales.
+
+Los condicionales, como su nombre indican, es tomar una decisión en función de una condición, es decir...
+
+```
+¿Tu hermano es mayor de edad?
+Sí - Legalmente puede beber alcohol
+No - Legalmente NO puede beber alcohol
+```
+
+Pero también podemos tener multiples condiciones cómo puede ser:
+
+```
+¿Tienes de 1-9 años?
+No
+¿Y de 10 a 19?
+No
+¿Y de 20 a 29?
+No
+¿Entonces?
+Tengo 60
+```
+
+Estos dos ejemplos son en lenguaje humano, pero podemos pasarlos a código fácilmente, usando el condicional `if () {}` o el `switch () {}`.
+
+#### El if
+
+La sentencia `if` recibe una condición, es decir, una variable u operación para determinar si ejecuta el bloque de código que encapsula o no, vamos a verlo con uno de los ejemplos de antes:
+
+```ts
+const isAdult: boolean = true;
+
+if (isAdult) {
+    console.log("Puede Beber");
+}
+
+// O tambien...
+const age = 17;
+
+if (age >= 18) {
+    console.log("Puede Beber");
+} else {
+    console.log("No Puede Beber");
+}
+```
+
+Actualmente, para acortar el código que desarrollamos y facilitar su lectura, podemos usar lo que se llaman `If Ternarios` o `Condicionales ternarios`, esto básicamente es una forma de escribir los condicionales sencillos en una sola línea, por ejemplo, el caso anterior de la edad quedaría así:
+
+```ts
+const age = 17;
+const textToShow = age >= 18 ? "Puede Beber" : "No Puede Beber";
+
+console.log(textToShow); // Puede Beber
+```
+
+Esta notación, para comportamientos simples es muy útil, ya que facilita la lectura cuando echamos ese primer vistazo al código.
+
+###### Multiples casos
+
+Hasta aquí bien, pero puede darse el caso, de que necesitemos controlar casos en los que las opciones sean más que **A** y **B**, como por ejemplo, vamos a imprimir por consola el nombre "humano" de las categorías de los productos de una tienda. Para este ejemplo tenemos dos opciones:
+
+Utilizar un `if` con multiples casos, o también conocido como `if con else if`:
+
+```ts
+const product = { price: 1, type: "book" };
+
+if (product.type === "book") {
+    console.log("La categoria es Libro");
+} else if (product.type === "film") {
+    console.log("La categoria es Película");
+} else if (product.type === "music") {
+    console.log("La categoria es Música");
+} else {
+    // si no se cumple ninguna de las condiciones anteriores
+    // se ejecuta el else
+    console.log("Categoría desconocida");
+}
+```
+
+Pero también podemos utilizar el condicional `switch`.
+
+#### Switch
+
+Esta estructura, realmente hace lo mismo que el if, pero con otra sintaxis distinta. Recibe una condición y ejecuta el bloque de código que cumpla dicha condición. Su sintaxis es la siguiente:
+
+```ts
+switch(condition) {
+    case <value_of_condition>:
+        // Code
+        break;
+    default:
+        // Code;
+        break;
+}
+```
+
+Para entenderlo mejor, vamos a utilizar el mismo ejemplo que en el caso anterior, el de los libros, películas y música.
+
+```ts
+const product = { price: 1, type: "book" };
+
+switch(product.type) {
+    case "book":
+        console.log("La categoria es Libro")
+        break;
+    case "film":
+        console.log("La categoria es Película")
+        break;
+    case "music":
+        console.log("La categoria es Música")
+        break;
+    default:
+        console.log("Categoria desconocida")
+        break;
+}
+```
+
+Hasta aquí los tipos de condicionales. Cada vez que tengamos que tomar una decisión en nuestro código dependiendo de alguna condición de nuestros datos, tendremos que utilizar estas estructuras para poder llevarlas a cabo.
+
+## Bucles o Loops
+
+Los bucles son estructuras que nos permiten iterar o recorrer todas las posiciones de un Array o Lista, para poder acceder a todos sus valores de manera unitaria, es decir, de uno en uno. Y como hemos visto anteriormente con el `IF` y con el `SWITCH`, necesitamos una condición para acceder al bloque de código que encapsula la estructura, en los bucles necesitamos indicar cuantas veces o hasta cuando tenemos que iterar. 
+
+En este punto, tenemos dos tipos de estructuras de bucles, el bucle **WHILE** ó **DO/WHILE** y el bucle **FOR**, y a cada una se le pasa la condición de manera diferente.
+
+#### WHILE y DO/WHILE
+
+WHILE es un tipo de bucle que ejecuta un bloque de código mientras la condición que recibe sea verdadera. Es recomendable que cada vez que se ejecute el bloque de código se modifique la condición  para que, aunque la iteración actual sea verdadera, el loop llegue a tener un final. De lo contrario crearemos un bucle infinito, mala práctica para no sobrecargar el proceso y la memoria de la máquina.
+
+```ts
+// ❌ No hacer esto
+const condition: boolean = true;
+
+while(condition) {
+    console.log("Console.log");
+    // CUIDADO!! Esto genera un bucle infinito.
+}
+
+// ✅ Este while tiene final
+let num = 1;
+
+while (num <= 10) {
+    console.log("Bloque ejecutado!");
+    num++; // Sumamos a num 1, con lo cual, llegará a 10.
+}
+```
+
+DO/WHILE es una estructura que se compone de dos partes, la sección del `do`, que es la que contiene el código a ejecutar; y el `while`, que es la que contiene la condición.
+
+```ts
+// Sintaxis
+do {
+    // Code...
+} while(condition);
+```
+
+**La principal diferencia con el `while`, es que en el bucle while, se tiene que cumplir la condición, y en el `do/while` primero ejecuta el bloque de código y si se cumple la condición lo repite N veces.**
+
+Vamos a ver un ejemplo funcional del `do/while`:
+
+```ts
+let num = 1;
+
+do {
+    console.log("Ejecuto el bloque");
+    num++;
+} while (num < 5);
+
+// Output: 4 X "Ejecuto el bloque"
+```
+
+#### FOR
+
+El **`FOR`** es un bucle que ejecuta un bloque de código cuando se cumpla una condición **que tenemos controlada por una operación lógica**, es decir, podemos iterar un array, del cual sabemos cual es su longitud. Para la sintaxis del for, necesitamos **la declaración de una variable numérica**, **la condición que se debe cumplir** y la **expresión de actualización** (para finalizar el bucle). En código la sintaxis quedaría así:
+
+```ts
+for (<Inicializacion>; <Condicion>, <Actualizacion>) {
+    console.log("Ejecutando...");
+}
+```
+
+En un ejemplo funcional, como hemos comentado anteriormente, podemos usar el **`FOR`** para iterar los elementos de un array y, por ejemplo, imprimirlos por consola de esta manera:
+
+```ts
+const fruits = ["Banana", "Apple", "Peach", "Orange"];
+
+for(let i = 0; i < fruits.length; i++) {
+    console.log(`La fruta es ${fruits[i]}`)
+}
+// Output:
+// 1. La fruta es Banana
+// 2. La fruta es Apple
+// 3. La fruta es Peach
+// 4. La fruta es Orange
+```
+
+El bucle **`FOR`** es uno de los más utilizados en la programación en la actualidad, pero es verdad, que desde ECMASCRIPT6, JavaScript y TypeScript nos traen estructuras como el **`FOR IN`** ó el **`FOR OF`**, y también algunos métodos específicos para Arrays, como pueden ser el **`array.forEach()`**, **`array.map()`**, **`array.filter()`**, **`array.some()`**, **`array.every()`**... y más métodos que su función es iterar sobre una lista.
+
+Respecto a estos métodos, se hará una publicación explicando de uno en uno, cuáles son sus funcionalidades y cómo operan.
+
+## Conclusión
+
+Como hemos dicho al principio del artículo, en el desarrollo de Software, la lógica que aplicamos a nuestros datos, se pueden resumir en dos estructuras, que son los condicionales, **`IF`** y **`SWITCH`** como hemos visto; y los bucles, como **`FOR`**, **`WHILE`** ó **`DO/WHILE`**.
+
+Dominar estas estructuras te dará mucho beneficio, y la manera de practicarlos, es con ejercicios de lógica, para pensar en las soluciones paso por paso, como lo haría una máquina, y despues decirle al ordenador cómo hacerlo en JavaScript o TypeScript. De esta forma aprenderemos programando, y cogeremos más agilidad a la hora de programar y codificar.

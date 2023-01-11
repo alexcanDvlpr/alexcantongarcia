@@ -6,8 +6,8 @@ const TAGS = {
   CSS: 'rgba(38, 77, 228, .7)',
   JavaScript: 'rgba(240, 219, 79, .7)',
   Desarrollo: 'rgba(0, 0, 0, .7)',
-  Testing: '#rgba(20, 189, 0, .7)',
-  Personal: '#rgba(0, 3, 169, .7)',
+  Testing: 'rgba(20, 189, 0, .7)',
+  Personal: 'rgba(0, 3, 169, .7)',
   Nodejs: 'rgba(60, 135, 58, 1)',
   TypeScript: 'rgba(0, 122, 204, .7)'
 }
