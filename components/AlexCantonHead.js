@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 const AlexCantonHead = ({ metadata = { } }) => {
   const SEO = {
-    title: metadata.seo_title || 'Alex Cantón',
+    title: metadata.seo_title || 'Alex Cantón | Aprende TypeScript desde 0 a PRO',
     description:
       metadata.description || 'Mi nombre es Alex Cantón y soy desarrollador web desde el 2017 en Madrid, España. Esta es mi web junto con mi blog en la que quiero compartir conocimiento, enseñar nuevas tecnologías y enseñar JavaScript desde 0 para gente que este estudiando o se este abriendo camino en el mundo laboral.',
     slug: metadata.slug || '',
