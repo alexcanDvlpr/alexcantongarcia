@@ -2,11 +2,11 @@ import AlexCantonHead from '../components/AlexCantonHead'
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import { Container, Heading, Text, Box } from '@chakra-ui/react'
-import AffiliateSection from '../components/AffiliateSection/AffiliateSection'
+// import AffiliateSection from '../components/AffiliateSection/AffiliateSection'
 import Link from 'next/link'
 
 const AffiliatePage = () => {
-  const bookProducts = [
+  /*const bookProducts = [
     '<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=alexcandvlp0b-21&language=es_ES&o=30&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=1119038634&linkId=e3850f3e889d15ab62436b9a64ded0b7"></iframe>',
     '<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=alexcandvlp0b-21&language=es_ES&o=30&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=8441532109&linkId=d1950d2d7c9601719a30b22e3590e60c"></iframe>',
     '<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-eu.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=alexcandvlp0b-21&language=es_ES&o=30&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08NVL66RM&linkId=773558d93367715ebfe043c1611726e9"></iframe>',
@@ -41,7 +41,7 @@ const AffiliatePage = () => {
   ]
 
   const ownHobbies = [
-  ]
+  ]*/
 
   const metadata = { title: 'Página Afiliación | Alex Cantón', index: false, slug: 'afiliados' }
   return (
