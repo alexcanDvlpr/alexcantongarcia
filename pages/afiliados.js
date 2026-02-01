@@ -3,6 +3,7 @@ import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import { Container, Heading, Text, Box } from '@chakra-ui/react'
 import AffiliateSection from '../components/AffiliateSection/AffiliateSection'
+import Link from "next/link";
 
 const AffiliatePage = () => {
   const bookProducts = [
@@ -55,11 +56,13 @@ const AffiliatePage = () => {
                             En esta sección, tendremos los distintos productos de Amazon que he comprado y os recomiendo a todos vosotros.
                         </Text>
                         <Box as={'main'} w={'100%'}>
-                            <AffiliateSection title={'Lecturas Recomendadas'} products={bookProducts} />
+                            <Link target="_blank" href="https://amzn.to/3MgMut2">Enlace aquí</Link>
+
+                            /*<AffiliateSection title={'Lecturas Recomendadas'} products={bookProducts} />
 
                             <AffiliateSection title={'Mi Setup'} products={ownProducts} />
 
-                            <AffiliateSection title={'Otros Intereses'} products={ownHobbies} />
+                            <AffiliateSection title={'Otros Intereses'} products={ownHobbies} /> */
                         </Box>
                     </div>
                 </Container>
