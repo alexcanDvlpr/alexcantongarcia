@@ -58,11 +58,11 @@ const AffiliatePage = () => {
                         <Box as={'main'} w={'100%'}>
                             <Link target="_blank" href="https://amzn.to/3MgMut2">Enlace aquí</Link>
 
-                            /*<AffiliateSection title={'Lecturas Recomendadas'} products={bookProducts} />
+                            {/*<AffiliateSection title={'Lecturas Recomendadas'} products={bookProducts} />
 
                             <AffiliateSection title={'Mi Setup'} products={ownProducts} />
 
-                            <AffiliateSection title={'Otros Intereses'} products={ownHobbies} /> */
+                            <AffiliateSection title={'Otros Intereses'} products={ownHobbies} /> */}
                         </Box>
                     </div>
                 </Container>
