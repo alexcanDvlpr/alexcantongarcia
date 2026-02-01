@@ -5,7 +5,6 @@ import { Container, Heading, Text, Box } from '@chakra-ui/react'
 import Link from 'next/link'
 
 const AffiliatePage = () => {
-
   const metadata = { title: 'Página Afiliación | Alex Cantón', index: false, slug: 'afiliados' }
   return (
         <>
