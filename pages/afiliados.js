@@ -13,13 +13,7 @@ const AffiliatePage = () => {
                 <Header showTitle={true} />
                 <Container className="affiliates__section" as="section" maxW="container.lg" >
                     <div className="affiliates__content">
-                        <Heading size="xl">Bienvenidos a la página de Afiliación</Heading>
-                        <Text mt={2} fontSize="lg">
-                            En esta sección, tendremos los distintos productos de Amazon que he comprado y os recomiendo a todos vosotros.
-                        </Text>
-                        <Box as={'main'} w={'100%'}>
-                            <Link target="_blank" href="https://amzn.to/3MgMut2">Enlace aquí</Link>
-                        </Box>
+                        <Link target="_blank" href="https://amzn.to/3MgMut2">Enlace aquí</Link>
                     </div>
                 </Container>
             </div >
