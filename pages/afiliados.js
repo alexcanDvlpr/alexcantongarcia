@@ -3,7 +3,7 @@ import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import { Container, Heading, Text, Box } from '@chakra-ui/react'
 import AffiliateSection from '../components/AffiliateSection/AffiliateSection'
-import Link from "next/link";
+import Link from 'next/link'
 
 const AffiliatePage = () => {
   const bookProducts = [
